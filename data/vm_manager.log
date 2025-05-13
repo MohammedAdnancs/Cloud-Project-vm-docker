@@ -1,0 +1,28 @@
+2025-05-13 00:03:43,566 - vm_manager - INFO - Successfully created VM firstvmwow
+2025-05-13 00:03:52,338 - vm_manager - INFO - Starting VM firstvmwow with command: qemu-system-x86_64 -m 1024 -smp 1 -drive file=data/disks\firsttry.qcow2,format=raw -cdrom data/isos\lubuntu-24.04.2-desktop-amd64.iso -boot order=dc -display gtk
+2025-05-13 00:15:32,747 - vm_manager - INFO - Successfully deleted VM firstvmwow
+2025-05-13 00:15:42,468 - vm_manager - INFO - Successfully created VM VMFirst
+2025-05-13 00:15:46,544 - vm_manager - INFO - Starting VM VMFirst with command: qemu-system-x86_64 -m 4096 -smp 2 -drive file=data/disks\firsttry.qcow2,format=raw -cdrom data/isos\lubuntu-24.04.2-desktop-amd64.iso -boot order=dc -display gtk
+2025-05-13 03:02:20,065 - vm_manager - INFO - Successfully deleted VM VMFirst
+2025-05-13 03:03:02,298 - vm_manager - ERROR - Disk firstdisk not found
+2025-05-13 03:03:14,329 - vm_manager - ERROR - Disk firstdisk not found
+2025-05-13 03:03:46,903 - vm_manager - ERROR - Disk firstdisk not found
+2025-05-13 03:05:55,847 - vm_manager - INFO - Successfully created VM firstvm
+2025-05-13 03:06:07,462 - vm_manager - INFO - Successfully deleted VM firstvm
+2025-05-13 03:06:52,435 - vm_manager - INFO - Successfully created VM firstvm
+2025-05-13 03:06:57,606 - vm_manager - INFO - Using disk data/disks\firstdisk.qcow2 with format qcow2
+2025-05-13 03:06:57,607 - vm_manager - INFO - Starting VM firstvm with command: qemu-system-x86_64 -m 4096 -smp 2 -drive file=data/disks\firstdisk.qcow2,format=qcow2 -cdrom data/isos\lubuntu-24.04.2-desktop-amd64.iso -boot order=dc -display gtk
+2025-05-13 12:10:37,244 - vm_manager - INFO - Using disk data/disks\firstdisk.qcow2 with format qcow2
+2025-05-13 12:10:37,245 - vm_manager - INFO - Starting VM firstvm with command: qemu-system-x86_64 -m 4096 -smp 2 -drive file=data/disks\firstdisk.qcow2,format=qcow2 -display gtk
+2025-05-13 12:10:58,264 - vm_manager - INFO - Successfully deleted VM firstvm
+2025-05-13 12:14:52,829 - vm_manager - INFO - Successfully created VM firstvm
+2025-05-13 12:14:57,985 - vm_manager - INFO - Using disk data/disks\fristvd.qcow2 with format qcow2
+2025-05-13 12:14:57,986 - vm_manager - INFO - Starting VM firstvm with command: qemu-system-x86_64 -m 4096 -smp 2 -drive file=data/disks\fristvd.qcow2,format=qcow2 -cdrom data/isos\lubuntu-24.04.2-desktop-amd64.iso -boot order=dc -display gtk
+2025-05-13 13:01:26,106 - vm_manager - INFO - Using disk data/disks\fristvd.qcow2 with format qcow2
+2025-05-13 13:01:26,106 - vm_manager - INFO - Starting VM firstvm with command: qemu-system-x86_64 -m 4096 -smp 2 -drive file=data/disks\fristvd.qcow2,format=qcow2 -display gtk
+2025-05-13 13:12:05,789 - vm_manager - INFO - Using disk data/disks\fristvd.qcow2 with format qcow2
+2025-05-13 13:12:05,790 - vm_manager - INFO - Starting VM firstvm with command: qemu-system-x86_64 -m 4096 -smp 2 -drive file=data/disks\fristvd.qcow2,format=qcow2 -display gtk
+2025-05-13 13:42:02,224 - vm_manager - INFO - Using disk data/disks\fristvd.qcow2 with format qcow2
+2025-05-13 13:42:02,225 - vm_manager - INFO - Starting VM firstvm with command: qemu-system-x86_64 -m 4096 -smp 2 -drive file=data/disks\fristvd.qcow2,format=qcow2 -display gtk
+2025-05-13 20:36:56,787 - vm_manager - INFO - Using disk data/disks\fristvd.qcow2 with format qcow2
+2025-05-13 20:36:56,788 - vm_manager - INFO - Starting VM firstvm with command: qemu-system-x86_64 -m 4096 -smp 2 -drive file=data/disks\fristvd.qcow2,format=qcow2 -display gtk

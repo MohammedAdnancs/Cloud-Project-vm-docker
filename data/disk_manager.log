@@ -1,0 +1,20 @@
+2025-05-12 12:04:59,001 - disk_manager - INFO - Running command: qemu-img create -f qcow2 data/disks\first.qcow2 5G
+2025-05-12 12:04:59,067 - disk_manager - INFO - Successfully created disk first with size 5G and format qcow2
+2025-05-12 23:38:54,155 - disk_manager - WARNING - Disk first no longer exists at data/disks\first.qcow2. Removing from registry.
+2025-05-12 23:39:23,938 - disk_manager - INFO - Running command: qemu-img create -f qcow2 data/disks\firsttry.qcow2 10G
+2025-05-12 23:39:24,604 - disk_manager - INFO - Successfully created disk firsttry with size 10G and format qcow2
+2025-05-12 23:49:34,267 - disk_manager - INFO - Running command: qemu-img create -f qcow2 data/disks\secondtry.qcow2 10G
+2025-05-12 23:49:34,372 - disk_manager - INFO - Successfully created disk secondtry with size 10G and format qcow2
+2025-05-13 00:03:13,792 - disk_manager - INFO - Running command: qemu-img create -f qcow2 data/disks\thirdtry.qcow2 10G
+2025-05-13 00:03:13,844 - disk_manager - INFO - Successfully created disk thirdtry with size 10G and format qcow2
+2025-05-13 00:14:45,652 - disk_manager - INFO - Successfully deleted disk thirdtry
+2025-05-13 00:14:47,839 - disk_manager - INFO - Successfully deleted disk secondtry
+2025-05-13 00:14:49,664 - disk_manager - INFO - Successfully deleted disk firsttry
+2025-05-13 00:15:09,602 - disk_manager - INFO - Running command: qemu-img create -f qcow2 data/disks\firsttry.qcow2 20G
+2025-05-13 00:15:09,648 - disk_manager - INFO - Successfully created disk firsttry with size 20G and format qcow2
+2025-05-13 03:02:23,362 - disk_manager - INFO - Successfully deleted disk firsttry
+2025-05-13 03:02:44,007 - disk_manager - INFO - Running command: qemu-img create -f qcow2 data/disks\firstdisk.qcow2 20G
+2025-05-13 03:02:44,537 - disk_manager - INFO - Successfully created disk firstdisk with size 20G and format qcow2
+2025-05-13 12:11:05,820 - disk_manager - INFO - Successfully deleted disk firstdisk
+2025-05-13 12:13:07,109 - disk_manager - INFO - Running command: qemu-img create -f qcow2 data/disks\fristvd.qcow2 20G
+2025-05-13 12:13:07,260 - disk_manager - INFO - Successfully created disk fristvd with size 20G and format qcow2

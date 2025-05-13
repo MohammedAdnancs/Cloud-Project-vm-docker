@@ -1,0 +1,8 @@
+{
+  "fristvd": {
+    "path": "data/disks\\fristvd.qcow2",
+    "format": "qcow2",
+    "size": 21474836480,
+    "created_time": 1747127587.2328863
+  }
+}
