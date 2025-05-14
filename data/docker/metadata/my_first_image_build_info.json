@@ -1,0 +1,8 @@
+{
+  "image_name": "my_first_image",
+  "dockerfile_path": "C:/Users/medoa/Desktop/cloud/data/dockerfiles/firstfile/Dockerfile",
+  "build_time": "2025-05-14T20:05:21.065860",
+  "is_project_structure": false,
+  "project_directory": null,
+  "build_output": ""
+}

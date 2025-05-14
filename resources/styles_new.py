@@ -83,51 +83,6 @@ def get_stylesheet():
         outline: none;
     }
 
-    QSpinBox::up-button, QSpinBox::down-button {
-        background-color: transparent;
-        border: 1px solid #3294e6;
-        width: 16px;
-        subcontrol-origin: border;
-    }
-
-    QSpinBox::up-button {
-        subcontrol-position: top right;
-        border-top-right-radius: 3px;
-        width: 16px;
-        background-color: #3a3a3a;
-        border: 1px solid #2a82da;
-    }
-
-    QSpinBox::down-button {
-        subcontrol-position: bottom right;
-        border-bottom-right-radius: 3px;
-        width: 16px;
-        background-color: #3a3a3a;
-        border: 1px solid #2a82da;
-    }
-
-    QSpinBox::up-button:hover, QSpinBox::down-button:hover {
-        background-color: #3294e6;
-        border: 1px solid #2a82da;
-    }
-    
-    QSpinBox::up-arrow {
-        image: url(:/qt-project.org/styles/commonstyle/images/up_arrow.png);
-        width: 10px;
-        height: 10px;
-    }
-
-    QSpinBox::down-arrow {
-        image: url(:/qt-project.org/styles/commonstyle/images/down_arrow.png);
-        width: 10px;
-        height: 10px;
-    }
-
-    QSpinBox::up-button, QSpinBox::down-button {
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
 
     QPushButton:hover {
         background-color: #3294e6;
@@ -156,12 +111,17 @@ def get_stylesheet():
     }
     
     /* Text input controls */
-    QLineEdit, QSpinBox, QComboBox {
+    QLineEdit, QComboBox {
         background-color: #1e1e1e;
         color: white;
-        border: 1px solid #2a82da;
-        border-radius: 3px;
+        padding: 8px;
+    }
+
+    QSpinBox{
         padding: 5px;
+        background-color: #1e1e1e;
+        arrow-color: #2a82da;
+
     }
     
     QTableWidget {

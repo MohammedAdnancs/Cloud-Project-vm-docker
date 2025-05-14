@@ -26,3 +26,5 @@
 2025-05-13 13:42:02,225 - vm_manager - INFO - Starting VM firstvm with command: qemu-system-x86_64 -m 4096 -smp 2 -drive file=data/disks\fristvd.qcow2,format=qcow2 -display gtk
 2025-05-13 20:36:56,787 - vm_manager - INFO - Using disk data/disks\fristvd.qcow2 with format qcow2
 2025-05-13 20:36:56,788 - vm_manager - INFO - Starting VM firstvm with command: qemu-system-x86_64 -m 4096 -smp 2 -drive file=data/disks\fristvd.qcow2,format=qcow2 -display gtk
+2025-05-13 22:43:07,937 - vm_manager - WARNING - VM config for firstvm no longer exists at data/vms\firstvm.json. Removing from registry.
+2025-05-13 22:47:22,058 - vm_manager - INFO - Added existing VM firstvm to registry

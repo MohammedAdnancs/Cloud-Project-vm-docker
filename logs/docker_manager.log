@@ -1,0 +1,750 @@
+2025-05-13 22:43:07,940 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-13 22:43:08,215 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-13 22:43:08,642 - docker_manager - INFO - Listing Docker images
+2025-05-13 22:43:08,785 - docker_manager - ERROR - Failed to list Docker images: error during connect: Head "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/_ping": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+2025-05-13 22:43:23,492 - docker_manager - INFO - Listing running Docker containers
+2025-05-13 22:43:23,702 - docker_manager - ERROR - Failed to list containers: error during connect: Get "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.48/containers/json": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+2025-05-13 22:47:22,060 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-13 22:47:22,145 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-13 22:47:22,561 - docker_manager - INFO - Listing Docker images
+2025-05-13 22:47:22,698 - docker_manager - ERROR - Failed to list Docker images: error during connect: Head "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/_ping": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+2025-05-13 22:47:24,858 - docker_manager - INFO - Listing running Docker containers
+2025-05-13 22:47:25,029 - docker_manager - ERROR - Failed to list containers: error during connect: Get "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.48/containers/json": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+2025-05-13 22:48:24,639 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-13 22:48:24,727 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-13 22:48:25,135 - docker_manager - INFO - Listing Docker images
+2025-05-13 22:48:25,276 - docker_manager - ERROR - Failed to list Docker images: error during connect: Head "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/_ping": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+2025-05-13 22:48:27,485 - docker_manager - INFO - Listing running Docker containers
+2025-05-13 22:48:27,655 - docker_manager - ERROR - Failed to list containers: error during connect: Get "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.48/containers/json": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+2025-05-13 22:49:13,726 - docker_manager - INFO - Created Dockerfile at data/dockerfiles\Dockerfile_20250513_224913
+2025-05-13 22:50:16,211 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-13 22:50:16,297 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-13 22:50:16,774 - docker_manager - INFO - Listing Docker images
+2025-05-13 22:50:16,910 - docker_manager - ERROR - Failed to list Docker images: error during connect: Head "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/_ping": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+2025-05-13 22:50:17,973 - docker_manager - INFO - Listing running Docker containers
+2025-05-13 22:50:18,124 - docker_manager - ERROR - Failed to list containers: error during connect: Get "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.48/containers/json": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+2025-05-13 22:51:13,336 - docker_manager - INFO - Building Docker image with command: docker build -t firstimage -f C:/Users/medoa/Desktop/cloud/data/dockerfiles/Dockerfile_20250513_224913 C:\Users\medoa\Desktop\cloud\data\dockerfiles
+2025-05-13 22:51:14,007 - docker_manager - ERROR - Failed to build Docker image: ERROR: error during connect: Head "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/_ping": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+2025-05-13 22:59:47,083 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-13 22:59:47,185 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-13 22:59:47,878 - docker_manager - INFO - Listing Docker images
+2025-05-13 22:59:47,940 - docker_manager - INFO - Listing running Docker containers
+2025-05-13 23:09:16,397 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-13 23:09:16,592 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-13 23:09:16,992 - docker_manager - INFO - Listing Docker images
+2025-05-13 23:09:17,034 - docker_manager - INFO - Listing running Docker containers
+2025-05-13 23:09:42,448 - docker_manager - INFO - Building Docker image with command: docker build -t firstimage -f C:/Users/medoa/Desktop/cloud/data/dockerfiles/Dockerfile_20250513_224913 C:\Users\medoa\Desktop\cloud\data\dockerfiles
+2025-05-13 23:09:45,868 - docker_manager - ERROR - Failed to build Docker image: #0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile_20250513_224913
+#1 transferring dockerfile:
+#1 transferring dockerfile: 499B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python:3.11-slim
+#2 ...
+
+#3 [auth] library/python:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11-slim
+#2 DONE 2.4s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 499B done
+#5 DONE 0.0s
+
+#6 [2/5] WORKDIR /app
+#6 CACHED
+
+#7 [3/5] COPY requirements.txt .
+#7 ERROR: failed to calculate checksum of ref g9s2w0dzlpr0igug3f4frn2uk::n5rs10mkldjdqzsi177daxswy: "/requirements.txt": not found
+
+#8 [1/5] FROM docker.io/library/python:3.11-slim@sha256:9c85d1d49df54abca1c5db3b4016400e198e9e9bb699f32f1ef8e5c0c2149ccf
+#8 resolve docker.io/library/python:3.11-slim@sha256:9c85d1d49df54abca1c5db3b4016400e198e9e9bb699f32f1ef8e5c0c2149ccf 0.0s done
+#8 CANCELED
+------
+ > [3/5] COPY requirements.txt .:
+------
+Dockerfile_20250513_224913:8
+--------------------
+   6 |     
+   7 |     # Copy the requirements file
+   8 | >>> COPY requirements.txt .
+   9 |     
+  10 |     # Install Python dependencies
+--------------------
+ERROR: failed to solve: failed to compute cache key: failed to calculate checksum of ref g9s2w0dzlpr0igug3f4frn2uk::n5rs10mkldjdqzsi177daxswy: "/requirements.txt": not found
+
+2025-05-13 23:13:42,333 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-13 23:13:42,370 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-13 23:13:42,790 - docker_manager - INFO - Listing Docker images
+2025-05-13 23:13:42,834 - docker_manager - INFO - Listing running Docker containers
+2025-05-13 23:14:07,600 - docker_manager - INFO - Building Docker image with command: docker build -t firstimage -f C:/Users/medoa/Desktop/cloud/data/dockerfiles/Dockerfile_20250513_224913 C:\Users\medoa\Desktop\cloud\data\dockerfiles
+2025-05-13 23:15:11,773 - docker_manager - INFO - Successfully built Docker image: firstimage
+2025-05-13 23:15:14,973 - docker_manager - INFO - Listing Docker images
+2025-05-14 15:05:25,427 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 15:05:25,666 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 15:05:26,175 - docker_manager - INFO - Listing Docker images
+2025-05-14 15:05:26,230 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 15:45:17,253 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 15:45:17,295 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 15:45:17,986 - docker_manager - INFO - Listing Docker images
+2025-05-14 15:45:18,031 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:02:18,684 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:02:18,721 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:02:19,166 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:02:19,212 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:03:24,263 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:03:24,304 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:03:24,733 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:03:24,779 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:04:43,958 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:04:43,998 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:04:44,451 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:04:44,493 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:05:00,852 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:05:00,888 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:05:01,326 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:05:01,368 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:05:35,814 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:05:35,849 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:05:36,295 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:05:36,342 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:06:30,038 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:06:30,076 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:06:30,523 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:06:30,567 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:08:18,830 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:08:18,869 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:08:19,293 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:08:19,340 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:08:34,769 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:08:34,832 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:08:35,257 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:08:35,297 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:08:47,596 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:08:47,635 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:08:48,062 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:08:48,104 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:09:05,554 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:09:05,591 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:09:06,082 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:09:06,126 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:09:17,189 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:09:17,228 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:09:17,686 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:09:17,727 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:09:31,431 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:09:31,469 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:09:31,944 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:09:31,987 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:09:49,252 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:09:49,295 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:09:49,727 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:09:49,768 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:10:07,260 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:10:07,297 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:10:07,711 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:10:07,752 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:10:14,584 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:10:14,628 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:10:15,067 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:10:15,111 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:11:46,033 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:11:46,074 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:11:46,552 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:11:46,597 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:14:47,194 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:14:47,234 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:14:47,675 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:14:47,718 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:34:59,561 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:34:59,609 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:35:00,081 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:35:00,121 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:35:55,999 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:35:56,041 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:35:56,512 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:35:56,553 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:43:55,027 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:43:55,066 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:43:55,513 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:43:55,554 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:46:38,576 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:46:38,623 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:46:39,066 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:46:39,108 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:46:50,700 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:46:50,739 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:46:51,163 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:46:51,204 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:47:21,881 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:47:21,916 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:47:22,343 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:47:22,388 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:47:33,533 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:47:33,574 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:47:34,018 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:47:34,060 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:47:54,675 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:47:54,717 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:47:55,149 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:47:55,264 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:48:24,937 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:48:24,976 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:48:25,408 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:48:25,452 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:48:41,527 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:48:41,563 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:48:41,995 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:48:42,039 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:50:12,689 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:50:12,729 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:50:13,163 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:50:13,205 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:50:55,208 - docker_manager - INFO - Running container with command: docker run -d --name first -p 8080:80 firstimage:latest
+2025-05-14 16:50:55,897 - docker_manager - INFO - Successfully started container: 8a140a7d8ae6b43045a8fdcec2af4bdca2ed262e224af7d488243cb99b9a225b
+2025-05-14 16:50:59,443 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:51:04,771 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:51:07,114 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:51:17,819 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 16:51:19,996 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:51:20,702 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:51:44,529 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:52:47,129 - docker_manager - INFO - Running container with command: docker run -d --name firstcon -p 8000 firstimage:latest
+2025-05-14 16:52:47,399 - docker_manager - INFO - Successfully started container: d2f1104f460418b6d18d9ceb854d614e6c7d4cdec1cb9e16122bb3ec66f03c9c
+2025-05-14 16:52:49,911 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:52:52,832 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:52:53,305 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:54:15,215 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:54:15,848 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 16:56:02,598 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 16:56:02,635 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 16:56:03,102 - docker_manager - INFO - Listing Docker images
+2025-05-14 16:56:03,184 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 17:09:31,433 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 17:09:31,471 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 17:09:32,013 - docker_manager - INFO - Listing Docker images
+2025-05-14 17:09:32,056 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 17:10:51,649 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 17:10:51,692 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 17:10:52,172 - docker_manager - INFO - Listing Docker images
+2025-05-14 17:10:52,216 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 17:11:15,226 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 17:11:15,794 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 17:14:38,864 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 17:14:38,904 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 17:14:39,346 - docker_manager - INFO - Listing Docker images
+2025-05-14 17:14:39,419 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 17:14:45,918 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 17:14:49,059 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 17:14:49,587 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 17:29:35,128 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 17:29:35,176 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 17:29:35,638 - docker_manager - INFO - Listing Docker images
+2025-05-14 17:29:35,681 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 17:29:57,872 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 17:29:57,912 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 17:29:57,912 - docker_manager - INFO - Listing Docker images
+2025-05-14 17:30:01,780 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 17:30:01,817 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 17:30:01,818 - docker_manager - INFO - Listing Docker images
+2025-05-14 17:30:10,357 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 17:30:10,398 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 17:30:10,843 - docker_manager - INFO - Listing Docker images
+2025-05-14 17:30:10,885 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 17:30:38,161 - docker_manager - INFO - Copied entry point file C:/Users/medoa/Desktop/New folder/test.py to C:\Users\medoa\Desktop\cloud\data\dockerfiles\test.py
+2025-05-14 17:30:38,161 - docker_manager - INFO - Created Dockerfile at data/dockerfiles\Dockerfile_20250514_173038
+2025-05-14 17:46:08,043 - docker_manager - INFO - Ensured directories: data/docker_environments, data/docker
+2025-05-14 17:46:08,084 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 17:46:08,520 - docker_manager - INFO - Found 0 Docker environments
+2025-05-14 17:46:08,520 - docker_manager - INFO - Listing Docker images
+2025-05-14 17:46:08,565 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 17:47:44,059 - docker_manager - INFO - Created or accessed environment directory: data/docker_environments\my_docker_env
+2025-05-14 17:47:44,063 - docker_manager - INFO - Copied entry point file C:/Users/medoa/Desktop/New folder/test.py to C:\Users\medoa\Desktop\cloud\data\docker_environments\my_docker_env\test.py
+2025-05-14 17:47:44,064 - docker_manager - INFO - Created empty requirements.txt at C:\Users\medoa\Desktop\cloud\data\docker_environments\my_docker_env\requirements.txt
+2025-05-14 17:47:44,064 - docker_manager - INFO - Created Dockerfile at data/docker_environments\my_docker_env\Dockerfile in environment: my_docker_env
+2025-05-14 17:48:09,126 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 17:48:27,655 - docker_manager - ERROR - Error building Docker image: Can't mix absolute and relative paths
+2025-05-14 17:55:46,128 - docker_manager - INFO - Ensured directories: data/docker_environments, data/docker
+2025-05-14 17:55:46,165 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 17:55:46,603 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 17:55:46,605 - docker_manager - INFO - Listing Docker images
+2025-05-14 17:55:46,647 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 17:55:51,139 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 17:55:52,293 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 17:56:16,436 - docker_manager - INFO - Ensured directories: data/docker_environments, data/docker
+2025-05-14 17:56:16,472 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 17:56:16,906 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 17:56:16,908 - docker_manager - INFO - Listing Docker images
+2025-05-14 17:56:16,951 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 17:56:42,544 - docker_manager - INFO - Ensured directories: data/docker_environments, data/docker
+2025-05-14 17:56:42,584 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 17:56:43,049 - docker_manager - INFO - Found 0 Docker environments
+2025-05-14 17:56:43,049 - docker_manager - INFO - Listing Docker images
+2025-05-14 17:56:43,090 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 17:57:23,746 - docker_manager - INFO - Created or accessed environment directory: data/docker_environments\env_20250514_175723
+2025-05-14 17:57:23,748 - docker_manager - INFO - Copied entry point file C:/Users/medoa/Desktop/New folder/test.py to C:\Users\medoa\Desktop\cloud\data\docker_environments\env_20250514_175723\test.py
+2025-05-14 17:57:23,749 - docker_manager - INFO - Created empty requirements.txt at C:\Users\medoa\Desktop\cloud\data\docker_environments\env_20250514_175723\requirements.txt
+2025-05-14 17:57:23,749 - docker_manager - INFO - Created Dockerfile at data/docker_environments\env_20250514_175723\Dockerfile in environment: env_20250514_175723
+2025-05-14 18:00:19,329 - docker_manager - INFO - Ensured directories: data/docker_environments, data/docker
+2025-05-14 18:00:19,368 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 18:00:19,812 - docker_manager - INFO - Found 0 Docker environments
+2025-05-14 18:00:19,812 - docker_manager - INFO - Listing Docker images
+2025-05-14 18:00:19,852 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 18:00:57,227 - docker_manager - INFO - Created or accessed environment directory: data/docker_environments\docker_file_one
+2025-05-14 18:00:57,229 - docker_manager - INFO - Copied entry point file C:/Users/medoa/Desktop/New folder/test.py to C:\Users\medoa\Desktop\cloud\data\docker_environments\docker_file_one\test.py
+2025-05-14 18:00:57,230 - docker_manager - INFO - Created empty requirements.txt at C:\Users\medoa\Desktop\cloud\data\docker_environments\docker_file_one\requirements.txt
+2025-05-14 18:00:57,230 - docker_manager - INFO - Created Dockerfile at data/docker_environments\docker_file_one\Dockerfile in environment: docker_file_one
+2025-05-14 18:01:09,442 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 18:01:22,006 - docker_manager - ERROR - Error building Docker image: Can't mix absolute and relative paths
+2025-05-14 18:01:33,387 - docker_manager - ERROR - Error building Docker image: Can't mix absolute and relative paths
+2025-05-14 18:01:45,428 - docker_manager - ERROR - Error building Docker image: Can't mix absolute and relative paths
+2025-05-14 18:01:53,052 - docker_manager - ERROR - Error building Docker image: Can't mix absolute and relative paths
+2025-05-14 18:02:15,794 - docker_manager - ERROR - Error building Docker image: Can't mix absolute and relative paths
+2025-05-14 18:04:56,161 - docker_manager - INFO - Ensured directories: data/docker_environments, data/docker
+2025-05-14 18:04:56,199 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 18:04:56,656 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 18:04:56,658 - docker_manager - INFO - Listing Docker images
+2025-05-14 18:04:56,698 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 18:04:59,508 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 18:05:04,640 - docker_manager - ERROR - Error building Docker image: Can't mix absolute and relative paths
+2025-05-14 18:05:51,541 - docker_manager - INFO - Ensured directories: data/docker_environments, data/docker
+2025-05-14 18:05:51,575 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 18:05:51,988 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 18:05:51,991 - docker_manager - INFO - Listing Docker images
+2025-05-14 18:05:52,034 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 18:05:55,091 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 18:06:00,181 - docker_manager - ERROR - Error building Docker image: Can't mix absolute and relative paths
+2025-05-14 18:06:11,418 - docker_manager - ERROR - Error building Docker image: Can't mix absolute and relative paths
+2025-05-14 18:06:43,137 - docker_manager - ERROR - Error building Docker image: Can't mix absolute and relative paths
+2025-05-14 18:10:35,731 - docker_manager - INFO - Ensured directories: data/docker_environments, data/docker
+2025-05-14 18:10:35,773 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 18:10:36,234 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 18:10:36,237 - docker_manager - INFO - Listing Docker images
+2025-05-14 18:10:36,278 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 18:10:38,695 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 18:10:43,922 - docker_manager - ERROR - Error building Docker image: Can't mix absolute and relative paths
+2025-05-14 18:11:09,020 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 18:11:18,902 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 18:11:25,009 - docker_manager - ERROR - Error building Docker image: Can't mix absolute and relative paths
+2025-05-14 18:12:31,689 - docker_manager - INFO - Ensured directories: data/docker_environments, data/docker
+2025-05-14 18:12:31,735 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 18:12:32,216 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 18:12:32,218 - docker_manager - INFO - Listing Docker images
+2025-05-14 18:12:32,261 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 18:19:28,807 - docker_manager - INFO - Ensured directories: data/docker_environments, data/docker
+2025-05-14 18:19:28,851 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 18:19:29,326 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 18:19:29,330 - docker_manager - INFO - Listing Docker images
+2025-05-14 18:19:29,382 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 18:19:32,371 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 18:19:58,028 - docker_manager - ERROR - Error building Docker image: Can't mix absolute and relative paths
+2025-05-14 18:20:05,097 - docker_manager - ERROR - Error building Docker image: Can't mix absolute and relative paths
+2025-05-14 19:10:21,478 - docker_manager - INFO - Ensured directories: data/docker_environments, data/docker
+2025-05-14 19:10:21,525 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:10:22,082 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 19:10:22,086 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:10:22,131 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 19:10:24,720 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 19:11:33,707 - docker_manager - INFO - Ensured directories: data/docker_environments, data/docker
+2025-05-14 19:11:33,748 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:11:34,184 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 19:11:34,186 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:11:34,228 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 19:11:40,563 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 19:12:25,611 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 19:14:22,698 - docker_manager - INFO - Ensured directories: data/docker_environments, data/docker
+2025-05-14 19:14:22,735 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:14:23,154 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 19:14:23,156 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:14:23,196 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 19:14:26,595 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 19:14:33,873 - docker_manager - ERROR - Error building Docker image: Can't mix absolute and relative paths
+2025-05-14 19:14:58,858 - docker_manager - INFO - Found 1 Docker environments
+2025-05-14 19:16:31,456 - docker_manager - INFO - Ensured directories: data/docker_environments, data/docker
+2025-05-14 19:16:31,494 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:16:31,927 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:16:32,042 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 19:17:03,794 - docker_manager - ERROR - Error building Docker image: Can't mix absolute and relative paths
+2025-05-14 19:17:10,365 - docker_manager - INFO - Ensured directories: data/docker_environments, data/docker
+2025-05-14 19:17:10,413 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:17:10,867 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:17:10,907 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 19:17:12,764 - docker_manager - INFO - Ensured directories: data/docker_environments, data/docker
+2025-05-14 19:17:12,806 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:17:13,237 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:17:13,278 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 19:17:31,841 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 19:17:31,883 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:17:32,306 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:17:32,344 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 19:17:34,502 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 19:17:34,546 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:17:35,001 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:17:35,042 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 19:17:51,746 - docker_manager - INFO - Building Docker image with command: docker build -t first -f C:/Users/medoa/Desktop/cloud/data/docker_environments/docker_file_one/Dockerfile C:\Users\medoa\Desktop\cloud\data\docker_environments\docker_file_one
+2025-05-14 19:17:58,480 - docker_manager - INFO - Successfully built Docker image: first
+2025-05-14 19:17:59,987 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:19:18,286 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 19:19:18,324 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:19:18,324 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:19:44,273 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 19:19:44,312 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:19:44,313 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:19:49,031 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 19:19:49,068 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:19:49,483 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:19:49,527 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 19:20:31,573 - docker_manager - INFO - Created Dockerfile at docker_file_two
+2025-05-14 19:37:31,264 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 19:37:31,301 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:37:31,734 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:37:31,774 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 19:37:47,446 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 19:37:47,483 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:37:47,900 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:37:47,942 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 19:37:58,375 - docker_manager - INFO - Created Dockerfile at first
+2025-05-14 19:38:32,134 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 19:38:32,176 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:38:32,605 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:38:32,649 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 19:39:45,644 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 19:39:45,684 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:39:46,110 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:39:46,150 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 19:41:08,533 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 19:41:08,569 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:41:09,034 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:41:09,077 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 19:47:35,343 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 19:47:35,385 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:47:35,863 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:47:35,904 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 19:48:54,737 - docker_manager - INFO - Created Docker project at data/dockerfiles\firstfiledocker
+2025-05-14 19:59:33,206 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 19:59:33,246 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 19:59:33,707 - docker_manager - INFO - Listing Docker images
+2025-05-14 19:59:33,749 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:00:02,108 - docker_manager - INFO - Building Docker image with command: docker build -t firstImage -f C:/Users/medoa/Desktop/cloud/data/dockerfiles/firstfiledocker/Dockerfile C:\Users\medoa\Desktop\cloud\data\dockerfiles\firstfiledocker
+2025-05-14 20:00:02,532 - docker_manager - ERROR - Failed to build Docker image: ERROR: invalid tag "firstImage": repository name must be lowercase
+
+2025-05-14 20:00:12,833 - docker_manager - INFO - Building Docker image with command: docker build -t firstimage -f C:/Users/medoa/Desktop/cloud/data/dockerfiles/firstfiledocker/Dockerfile C:\Users\medoa\Desktop\cloud\data\dockerfiles\firstfiledocker
+2025-05-14 20:00:46,031 - docker_manager - INFO - Successfully built Docker image: firstimage
+2025-05-14 20:00:49,532 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:04:31,803 - docker_manager - INFO - Created Docker project at data/dockerfiles\firstfile
+2025-05-14 20:05:17,982 - docker_manager - INFO - Building Docker image with command: docker build -t my_first_image -f C:/Users/medoa/Desktop/cloud/data/dockerfiles/firstfile/Dockerfile C:\Users\medoa\Desktop\cloud\data\dockerfiles\firstfile
+2025-05-14 20:05:21,065 - docker_manager - INFO - Successfully built Docker image: my_first_image
+2025-05-14 20:05:24,798 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:06:06,711 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:06:27,907 - docker_manager - INFO - Running container with command: docker run -d --name firstcontainer -p 0 my_first_image:latest
+2025-05-14 20:06:28,430 - docker_manager - INFO - Successfully started container: ee14764c5501ab323de8acb6a8abb56dad78be9d71c8a6359e8dece2e7d021e6
+2025-05-14 20:06:31,036 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:06:33,812 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:06:34,148 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:06:42,215 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:06:42,811 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:06:43,215 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:06:43,534 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:06:52,504 - docker_manager - INFO - Running container with command: docker run -d my_first_image:latest
+2025-05-14 20:06:52,919 - docker_manager - INFO - Successfully started container: 493f8de2d7e60a32b5851b1a5f9d14f6e94976b74b8c0b1ea0e5407e1db8ac50
+2025-05-14 20:06:54,316 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:07:04,848 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:07:05,274 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:07:07,714 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 20:07:07,832 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 20:07:08,284 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:07:08,363 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:07:15,200 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:07:16,006 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:07:16,656 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:07:17,564 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:07:18,074 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:19:29,967 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 20:19:30,008 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 20:19:30,492 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:19:30,542 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:19:35,600 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:19:36,207 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:19:59,128 - docker_manager - INFO - Running container with command: docker run -d --name firstcontainer -p 0 my_first_image:latest
+2025-05-14 20:19:59,572 - docker_manager - INFO - Successfully started container: e344d43235fe3c6575c17bc90d54bf316b5a5bf4a6c8bdf86c9dfa0a40bf7fe8
+2025-05-14 20:20:01,945 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:20:04,148 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:20:15,541 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:20:16,833 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:20:17,548 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:20:22,712 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 20:20:22,752 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 20:20:23,298 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:20:23,378 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:20:29,971 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:20:30,152 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:20:30,569 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:20:31,622 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:23:38,393 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 20:23:38,432 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 20:23:38,858 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:23:38,937 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:23:44,259 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:31:35,964 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 20:31:36,002 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 20:31:36,433 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:31:36,473 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:31:40,844 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:31:45,514 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:32:18,360 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:32:19,148 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:32:19,407 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:32:19,563 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:32:19,722 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:32:21,565 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:32:22,030 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:32:22,351 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:32:22,793 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:32:42,141 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 20:32:42,179 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 20:32:42,636 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:32:42,678 - docker_manager - INFO - Listing running Docker containers
+2025-05-14 20:38:07,574 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 20:38:07,617 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 20:38:08,062 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:38:08,104 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:38:14,118 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:38:15,023 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:38:15,166 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:38:15,290 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:39:32,213 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 20:39:32,260 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 20:39:32,699 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:39:32,741 - docker_manager - INFO - Listing all Docker containers
+2025-05-14 20:46:31,975 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 20:46:32,013 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 20:46:32,438 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:46:33,360 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 20:46:33,404 - docker_manager - INFO - Container output raw: e344d43235fe	my_first_image:latest	Exited (0) 5 minutes ago	firstcontainer	
+
+2025-05-14 20:46:33,404 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 5 minutes ago	firstcontainer
+2025-05-14 20:47:14,469 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 20:47:14,511 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 20:47:14,934 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:47:15,144 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 20:47:15,180 - docker_manager - INFO - Container output raw: e344d43235fe	my_first_image:latest	Exited (0) 5 minutes ago	firstcontainer	
+
+2025-05-14 20:47:15,181 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 5 minutes ago	firstcontainer
+2025-05-14 20:47:23,126 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 20:47:23,160 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 20:47:23,612 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:47:23,864 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 20:47:23,902 - docker_manager - INFO - Container output raw: e344d43235fe	my_first_image:latest	Exited (0) 5 minutes ago	firstcontainer	
+
+2025-05-14 20:47:23,902 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 5 minutes ago	firstcontainer
+2025-05-14 20:48:10,836 - docker_manager - INFO - Created Docker project at data/dockerfiles\secondfile
+2025-05-14 20:48:50,141 - docker_manager - INFO - Building Docker image with command: docker build -t my_second_image -f C:/Users/medoa/Desktop/cloud/data/dockerfiles/secondfile/Dockerfile C:\Users\medoa\Desktop\cloud\data\dockerfiles\secondfile
+2025-05-14 20:48:52,095 - docker_manager - INFO - Successfully built Docker image: my_second_image
+2025-05-14 20:48:54,130 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:49:16,406 - docker_manager - INFO - Running container with command: docker run -d -p 0 my_second_image:latest
+2025-05-14 20:49:16,811 - docker_manager - INFO - Successfully started container: 87f5ecadea443208502dd1637593ebcb860a1cba0c161f8686567589c4af37fd
+2025-05-14 20:49:18,175 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 20:49:18,234 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 1 second ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 29 minutes ago	firstcontainer	
+
+2025-05-14 20:49:18,234 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 1 second ago	vigorous_khayyam	
+2025-05-14 20:49:18,234 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 29 minutes ago	firstcontainer
+2025-05-14 20:49:51,973 - docker_manager - INFO - Starting container: 87f5ecadea44
+2025-05-14 20:49:52,177 - docker_manager - INFO - Successfully started container: 87f5ecadea44
+2025-05-14 20:49:57,497 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 20:49:57,553 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 5 seconds ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 29 minutes ago	firstcontainer	
+
+2025-05-14 20:49:57,554 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 5 seconds ago	vigorous_khayyam	
+2025-05-14 20:49:57,554 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 29 minutes ago	firstcontainer
+2025-05-14 20:50:01,307 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 20:50:01,365 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 9 seconds ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 30 minutes ago	firstcontainer	
+
+2025-05-14 20:50:01,365 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 9 seconds ago	vigorous_khayyam	
+2025-05-14 20:50:01,366 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 30 minutes ago	firstcontainer
+2025-05-14 20:50:02,789 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 20:50:02,846 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 10 seconds ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 30 minutes ago	firstcontainer	
+
+2025-05-14 20:50:02,846 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 10 seconds ago	vigorous_khayyam	
+2025-05-14 20:50:02,847 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 30 minutes ago	firstcontainer
+2025-05-14 20:55:04,159 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 20:55:04,196 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 20:55:04,605 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:55:04,904 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 20:55:04,980 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer	
+
+2025-05-14 20:55:04,980 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+2025-05-14 20:55:04,981 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer
+2025-05-14 20:58:50,773 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 20:58:50,811 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 20:58:51,233 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:58:51,459 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 20:58:51,499 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer	
+
+2025-05-14 20:58:51,499 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+2025-05-14 20:58:51,500 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer
+2025-05-14 20:59:04,441 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 20:59:04,479 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 20:59:04,929 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:59:05,142 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 20:59:05,178 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer	
+
+2025-05-14 20:59:05,179 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+2025-05-14 20:59:05,179 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer
+2025-05-14 20:59:31,015 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 20:59:31,053 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 20:59:31,462 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:59:31,675 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 20:59:31,713 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer	
+
+2025-05-14 20:59:31,714 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+2025-05-14 20:59:31,714 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer
+2025-05-14 20:59:41,397 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 20:59:41,433 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 20:59:41,873 - docker_manager - INFO - Listing Docker images
+2025-05-14 20:59:42,080 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 20:59:42,118 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer	
+
+2025-05-14 20:59:42,118 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+2025-05-14 20:59:42,119 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer
+2025-05-14 21:09:46,688 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 21:09:46,726 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 21:09:47,131 - docker_manager - INFO - Listing Docker images
+2025-05-14 21:09:47,352 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 21:09:47,389 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer	
+
+2025-05-14 21:09:47,389 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+2025-05-14 21:09:47,389 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer
+2025-05-14 21:10:19,458 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 21:10:19,494 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 21:10:19,905 - docker_manager - INFO - Listing Docker images
+2025-05-14 21:10:20,114 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 21:10:20,157 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer	
+
+2025-05-14 21:10:20,157 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+2025-05-14 21:10:20,158 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer
+2025-05-14 21:10:55,098 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 21:10:55,134 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 21:10:55,559 - docker_manager - INFO - Listing Docker images
+2025-05-14 21:10:55,764 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 21:10:55,802 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer	
+
+2025-05-14 21:10:55,803 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+2025-05-14 21:10:55,804 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer
+2025-05-14 21:12:14,674 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 21:12:14,711 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 21:12:15,137 - docker_manager - INFO - Listing Docker images
+2025-05-14 21:12:15,336 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 21:12:15,374 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer	
+
+2025-05-14 21:12:15,374 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+2025-05-14 21:12:15,375 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer
+2025-05-14 21:27:34,729 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 21:27:34,783 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 21:28:24,779 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 21:28:24,825 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 21:28:25,387 - docker_manager - INFO - Listing Docker images
+2025-05-14 21:29:19,483 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 21:29:19,522 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 21:29:19,964 - docker_manager - INFO - Listing Docker images
+2025-05-14 21:32:20,831 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 21:32:20,883 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 21:33:18,430 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 21:33:18,534 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 21:34:05,190 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 21:34:05,231 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 21:36:17,917 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 21:36:17,958 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 21:36:18,419 - docker_manager - INFO - Listing Docker images
+2025-05-14 21:36:18,697 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 21:36:18,736 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer	
+
+2025-05-14 21:36:18,737 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+2025-05-14 21:36:18,737 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer
+2025-05-14 21:37:19,149 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 21:37:19,185 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 21:37:19,668 - docker_manager - INFO - Listing Docker images
+2025-05-14 21:37:19,883 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 21:37:19,922 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer	
+
+2025-05-14 21:37:19,923 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+2025-05-14 21:37:19,923 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer
+2025-05-14 21:39:25,983 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 21:39:26,023 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 21:39:26,511 - docker_manager - INFO - Listing Docker images
+2025-05-14 21:39:26,727 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 21:39:26,765 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer	
+
+2025-05-14 21:39:26,766 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+2025-05-14 21:39:26,766 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer
+2025-05-14 21:41:02,684 - docker_manager - INFO - Created Docker project at data/dockerfiles\medo
+2025-05-14 21:41:07,256 - docker_manager - INFO - Listing Docker images
+2025-05-14 21:42:54,118 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 21:42:54,161 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 21:42:54,636 - docker_manager - INFO - Listing Docker images
+2025-05-14 21:42:54,844 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 21:42:54,883 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer	
+
+2025-05-14 21:42:54,884 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+2025-05-14 21:42:54,884 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer
+2025-05-14 21:44:43,436 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 21:44:43,473 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 21:44:43,937 - docker_manager - INFO - Listing Docker images
+2025-05-14 21:44:44,229 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 21:44:44,269 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer	
+
+2025-05-14 21:44:44,269 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 5 minutes ago	vigorous_khayyam	
+2025-05-14 21:44:44,269 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 35 minutes ago	firstcontainer
+2025-05-14 21:45:04,896 - docker_manager - INFO - Building Docker image with command: docker build -t my_third_image -f C:/Users/medoa/Desktop/cloud/data/dockerfiles/medo/Dockerfile C:\Users\medoa\Desktop\cloud\data\dockerfiles\medo
+2025-05-14 21:45:13,367 - docker_manager - INFO - Successfully built Docker image: my_third_image
+2025-05-14 21:46:30,523 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-14 21:46:30,562 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-14 21:46:31,040 - docker_manager - INFO - Listing Docker images
+2025-05-14 21:46:31,352 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 21:46:31,413 - docker_manager - INFO - Container output raw: 87f5ecadea44	my_second_image:latest	Exited (2) 56 minutes ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) About an hour ago	firstcontainer	
+
+2025-05-14 21:46:31,414 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 56 minutes ago	vigorous_khayyam	
+2025-05-14 21:46:31,414 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) About an hour ago	firstcontainer
+2025-05-14 21:46:50,229 - docker_manager - INFO - Running container with command: docker run -d -p 0 my_third_image:latest
+2025-05-14 21:46:50,735 - docker_manager - INFO - Successfully started container: 1942378e0ad82bda5778e7c1d0a59f7efd9e8dcc3e0c9a258a773eb723d1c35d
+2025-05-14 21:46:52,046 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-14 21:46:52,115 - docker_manager - INFO - Container output raw: 1942378e0ad8	my_third_image:latest	Exited (2) 1 second ago	busy_heyrovsky	
+87f5ecadea44	my_second_image:latest	Exited (2) 56 minutes ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) About an hour ago	firstcontainer	
+
+2025-05-14 21:46:52,116 - docker_manager - INFO - Processing container line: 1942378e0ad8	my_third_image:latest	Exited (2) 1 second ago	busy_heyrovsky	
+2025-05-14 21:46:52,116 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 56 minutes ago	vigorous_khayyam	
+2025-05-14 21:46:52,116 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) About an hour ago	firstcontainer
