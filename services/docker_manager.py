@@ -400,40 +400,34 @@ class DockerManager:
             return False, f"Error searching for local images: {str(e)}", []
     
     def search_dockerhub(self, search_term=None):
-        """
-        Search for Docker images on DockerHub.
-        
-        Args:
-            search_term (str, optional): Image name to search for. If None, prompts user.
-            
-        Returns:
-            tuple: (success (bool), message (str), results (list))
-        """
+
         try:
             # Get search term if not provided
             if search_term is None:
                 search_term = input("Enter image name to search for on DockerHub: ")
-            
-            # Search DockerHub
-            cmd = ["docker", "search", "--format", "{{.Name}}\t{{.Description}}\t{{.Stars}}\t{{.Official}}\t{{.Automated}}", search_term]
+              # Search DockerHub
+            # Use a simpler format without template parsing issues
+            cmd = ["docker", "search", "--format", "{{json .}}", search_term]
             logger.info(f"Searching DockerHub for: {search_term}")
             
             process = subprocess.run(cmd, capture_output=True, text=True)
-            
             if process.returncode == 0:
                 results = []
                 for line in process.stdout.strip().split('\n'):
                     if line:  # Skip empty lines
-                        parts = line.split('\t')
-                        if len(parts) >= 5:
+                        try:
+                            # Parse JSON for each result
+                            docker_result = json.loads(line)
                             result = {
-                                "name": parts[0],
-                                "description": parts[1],
-                                "stars": parts[2],
-                                "official": parts[3] == "[OK]",
-                                "automated": parts[4] == "[OK]"
+                                "name": docker_result.get("Name", ""),
+                                "description": docker_result.get("Description", ""),
+                                "stars": str(docker_result.get("StarCount", 0)),  # Convert to string for consistency
+                                "official": docker_result.get("IsOfficial", "") == "[OK]",
+                                "automated": docker_result.get("IsAutomated", "") == "[OK]"
                             }
                             results.append(result)
+                        except json.JSONDecodeError as e:
+                            logger.error(f"Failed to parse Docker Hub search result: {e} - Line: {line}")
                 
                 logger.info(f"Found {len(results)} results on DockerHub for '{search_term}'")
                 return True, f"Found {len(results)} results on DockerHub for '{search_term}'", results
@@ -446,15 +440,6 @@ class DockerManager:
             return False, f"Error searching DockerHub: {str(e)}", []
     
     def pull_image(self, image_name=None):
-        """
-        Pull a Docker image from a registry.
-        
-        Args:
-            image_name (str, optional): Name of the image to pull. If None, prompts user.
-            
-        Returns:
-            tuple: (success (bool), message (str))
-        """
         try:
             # Get image name if not provided
             if image_name is None:

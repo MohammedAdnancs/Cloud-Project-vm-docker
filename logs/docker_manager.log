@@ -748,3 +748,62 @@ e344d43235fe	my_first_image:latest	Exited (0) About an hour ago	firstcontainer
 2025-05-14 21:46:52,116 - docker_manager - INFO - Processing container line: 1942378e0ad8	my_third_image:latest	Exited (2) 1 second ago	busy_heyrovsky	
 2025-05-14 21:46:52,116 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 56 minutes ago	vigorous_khayyam	
 2025-05-14 21:46:52,116 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) About an hour ago	firstcontainer
+2025-05-15 03:44:45,892 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-15 03:44:46,027 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-15 03:44:46,879 - docker_manager - INFO - Listing Docker images
+2025-05-15 03:44:47,029 - docker_manager - ERROR - Failed to list Docker images: error during connect: Head "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/_ping": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+2025-05-15 03:44:51,674 - docker_manager - ERROR - Docker is not accessible: ERROR: error during connect: Get "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.48/info": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+errors pretty printing info
+
+2025-05-15 03:50:21,386 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-15 03:50:21,438 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-15 03:50:21,904 - docker_manager - INFO - Listing Docker images
+2025-05-15 03:50:22,193 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-15 03:50:22,261 - docker_manager - INFO - Container output raw: 1942378e0ad8	my_third_image:latest	Exited (2) 6 hours ago	busy_heyrovsky	
+87f5ecadea44	my_second_image:latest	Exited (2) 7 hours ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 8 hours ago	firstcontainer	
+
+2025-05-15 03:50:22,262 - docker_manager - INFO - Processing container line: 1942378e0ad8	my_third_image:latest	Exited (2) 6 hours ago	busy_heyrovsky	
+2025-05-15 03:50:22,262 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 7 hours ago	vigorous_khayyam	
+2025-05-15 03:50:22,262 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 8 hours ago	firstcontainer
+2025-05-15 03:52:11,428 - docker_manager - INFO - Listing Docker images
+2025-05-15 03:52:11,470 - docker_manager - INFO - Found 1 images matching 'my_first_image'
+2025-05-15 13:21:03,880 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-15 13:21:04,178 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-15 13:21:05,027 - docker_manager - INFO - Listing Docker images
+2025-05-15 13:21:05,182 - docker_manager - ERROR - Failed to list Docker images: error during connect: Head "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/_ping": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+2025-05-15 13:21:09,662 - docker_manager - ERROR - Docker is not accessible: ERROR: error during connect: Get "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.48/info": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+errors pretty printing info
+
+2025-05-15 13:22:11,706 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-15 13:22:11,768 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-15 13:22:12,262 - docker_manager - INFO - Listing Docker images
+2025-05-15 13:22:12,580 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-15 13:22:12,650 - docker_manager - INFO - Container output raw: 1942378e0ad8	my_third_image:latest	Exited (2) 16 hours ago	busy_heyrovsky	
+87f5ecadea44	my_second_image:latest	Exited (2) 17 hours ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 17 hours ago	firstcontainer	
+
+2025-05-15 13:22:12,650 - docker_manager - INFO - Processing container line: 1942378e0ad8	my_third_image:latest	Exited (2) 16 hours ago	busy_heyrovsky	
+2025-05-15 13:22:12,650 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 17 hours ago	vigorous_khayyam	
+2025-05-15 13:22:12,651 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 17 hours ago	firstcontainer
+2025-05-15 13:22:55,183 - docker_manager - INFO - Searching DockerHub for: mongo
+2025-05-15 13:22:55,975 - docker_manager - ERROR - Failed to search DockerHub: template parsing error: template: :1:29: executing "" at <.Stars>: can't evaluate field Stars in type *registry.searchContext
+
+2025-05-15 13:23:38,720 - docker_manager - INFO - Searching DockerHub for: mongo
+2025-05-15 13:23:39,261 - docker_manager - ERROR - Failed to search DockerHub: template parsing error: template: :1:29: executing "" at <.Stars>: can't evaluate field Stars in type *registry.searchContext
+
+2025-05-15 13:30:27,620 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-15 13:30:27,659 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-15 13:30:28,149 - docker_manager - INFO - Listing Docker images
+2025-05-15 13:30:28,362 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-15 13:30:28,405 - docker_manager - INFO - Container output raw: 1942378e0ad8	my_third_image:latest	Exited (2) 16 hours ago	busy_heyrovsky	
+87f5ecadea44	my_second_image:latest	Exited (2) 17 hours ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 17 hours ago	firstcontainer	
+
+2025-05-15 13:30:28,405 - docker_manager - INFO - Processing container line: 1942378e0ad8	my_third_image:latest	Exited (2) 16 hours ago	busy_heyrovsky	
+2025-05-15 13:30:28,405 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 17 hours ago	vigorous_khayyam	
+2025-05-15 13:30:28,406 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 17 hours ago	firstcontainer
+2025-05-15 13:30:33,756 - docker_manager - INFO - Searching DockerHub for: mongo
+2025-05-15 13:30:34,349 - docker_manager - INFO - Found 25 results on DockerHub for 'mongo'

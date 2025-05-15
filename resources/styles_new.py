@@ -120,8 +120,6 @@ def get_stylesheet():
     QSpinBox{
         padding: 5px;
         background-color: #1e1e1e;
-        arrow-color: #2a82da;
-
     }
     
     QTableWidget {
