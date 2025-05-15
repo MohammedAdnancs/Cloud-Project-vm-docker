@@ -26,13 +26,28 @@ data/vm_registry.json
 logs/*.log
 
 # Virtual machine related files
-data/disks/
-data/vms/
-data/isos/
+data/disks/*.qcow2
+data/disks/*.vdi
+data/disks/*.vmdk
+data/disks/*.vhd
+data/disks/*.raw
+data/vms/*.json
+data/isos/*.iso
 
 # Docker related files
-data/docker/
-data/dockerfiles/
+data/docker/metadata/*.json
+data/docker/containers/
+data/docker/images/
+
+# Generated dockerfiles and data
+data/dockerfiles/*
+!data/dockerfiles/.gitkeep
+
+# Keep directory structure but ignore content
+!data/disks/.gitkeep
+!data/vms/.gitkeep
+!data/isos/.gitkeep
+!data/docker/metadata/.gitkeep
 
 # Editor-specific files
 .vscode/

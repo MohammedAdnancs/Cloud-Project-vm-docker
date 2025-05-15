@@ -20,6 +20,44 @@ A graphical tool for managing and running virtual machines with QEMU.
   - Organized disk and VM management tabs
   - Progress indicators for operations
 
+## Setup and Installation
+
+### Prerequisites
+
+- Python 3.8 or higher
+- QEMU (for VM management)
+- Docker (optional, for container management)
+
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/cloud-vm-manager.git
+   cd cloud-vm-manager
+   ```
+
+2. Install required Python packages:
+   ```
+   pip install -r requirements.txt
+   ```
+
+3. Run the application:
+   ```
+   python main.py
+   ```
+
+### Directory Structure
+
+The application will create several directories when first run:
+
+- `data/disks/` - Storage for virtual disk images
+- `data/vms/` - Configuration files for virtual machines
+- `data/isos/` - Storage for ISO images
+- `data/docker/` - Docker-related files and metadata
+- `data/dockerfiles/` - Dockerfile projects
+
+These directories are excluded from version control in the `.gitignore` file but will be created automatically when the application runs.
+
 ## Requirements
 
 - Python 3.6+

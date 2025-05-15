@@ -1,0 +1,7 @@
+# Core requirements for cloud VM GUI application
+PyQt5>=5.15.0
+rich>=14.0.0
+
+# Required for VM management
+# These may need to be installed based on your system's configuration
+# qemu and docker are system dependencies and should be installed separately
