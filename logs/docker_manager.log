@@ -807,3 +807,18 @@ e344d43235fe	my_first_image:latest	Exited (0) 17 hours ago	firstcontainer
 2025-05-15 13:30:28,406 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 17 hours ago	firstcontainer
 2025-05-15 13:30:33,756 - docker_manager - INFO - Searching DockerHub for: mongo
 2025-05-15 13:30:34,349 - docker_manager - INFO - Found 25 results on DockerHub for 'mongo'
+2025-05-15 16:24:59,425 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-15 16:24:59,502 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-15 16:25:00,442 - docker_manager - INFO - Listing Docker images
+2025-05-15 16:25:01,398 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-15 16:25:01,476 - docker_manager - INFO - Container output raw: 
+2025-05-15 16:26:24,756 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-15 16:26:24,821 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-15 16:26:25,250 - docker_manager - INFO - Listing Docker images
+2025-05-15 16:26:25,632 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-15 16:26:25,702 - docker_manager - INFO - Container output raw: 
+2025-05-15 16:28:16,387 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-15 16:28:16,495 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-15 16:28:17,440 - docker_manager - INFO - Listing Docker images
+2025-05-15 16:28:18,622 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-15 16:28:18,760 - docker_manager - INFO - Container output raw: 

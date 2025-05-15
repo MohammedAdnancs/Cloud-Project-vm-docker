@@ -20,3 +20,6 @@
 2025-05-13 12:13:07,260 - disk_manager - INFO - Successfully created disk fristvd with size 20G and format qcow2
 2025-05-13 22:43:07,932 - disk_manager - WARNING - Disk fristvd no longer exists at data/disks\fristvd.qcow2. Removing from registry.
 2025-05-13 22:47:22,055 - disk_manager - INFO - Added existing disk fristvd to registry
+2025-05-15 16:24:59,419 - disk_manager - WARNING - Disk fristvd no longer exists at data/disks\fristvd.qcow2. Removing from registry.
+2025-05-15 16:25:18,826 - disk_manager - INFO - Running command: qemu-img create -f qcow2 data/disks\testmarch.qcow2 10G
+2025-05-15 16:25:19,684 - disk_manager - INFO - Successfully created disk testmarch with size 10G and format qcow2

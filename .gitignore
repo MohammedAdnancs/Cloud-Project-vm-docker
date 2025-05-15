@@ -1,0 +1,53 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Distribution / packaging
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Generated data and log files
+data/*.log
+data/cloud_vm_gui.log
+data/cloud_vm_manager.log
+data/disk_manager.log
+data/vm_manager.log
+data/disk_registry.json
+data/vm_registry.json
+logs/*.log
+
+# Virtual machine related files
+data/disks/
+data/vms/
+data/isos/
+
+# Docker related files
+data/docker/
+data/dockerfiles/
+
+# Editor-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Python environments
+.env
+.venv
+pip-debug.log
+
+# Application specific generated files
+*.log
