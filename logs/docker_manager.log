@@ -822,3 +822,68 @@ e344d43235fe	my_first_image:latest	Exited (0) 17 hours ago	firstcontainer
 2025-05-15 16:28:17,440 - docker_manager - INFO - Listing Docker images
 2025-05-15 16:28:18,622 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
 2025-05-15 16:28:18,760 - docker_manager - INFO - Container output raw: 
+2025-05-16 19:02:42,500 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-16 19:02:42,569 - docker_manager - INFO - Docker detected: Docker version 28.1.1, build 4eba377
+2025-05-16 19:02:43,013 - docker_manager - INFO - Listing Docker images
+2025-05-16 19:02:43,644 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 19:02:43,719 - docker_manager - INFO - Container output raw: 
+2025-05-16 19:07:48,630 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-16 19:07:48,703 - docker_manager - INFO - Docker detected: Docker version 28.1.1, build 4eba377
+2025-05-16 19:07:49,092 - docker_manager - INFO - Listing Docker images
+2025-05-16 19:07:49,459 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 19:07:49,530 - docker_manager - INFO - Container output raw: 
+2025-05-16 19:12:55,718 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-16 19:12:55,785 - docker_manager - INFO - Docker detected: Docker version 28.1.1, build 4eba377
+2025-05-16 19:12:56,171 - docker_manager - INFO - Listing Docker images
+2025-05-16 19:12:56,547 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 19:12:56,619 - docker_manager - INFO - Container output raw: 
+2025-05-16 19:14:21,045 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-16 19:14:21,111 - docker_manager - INFO - Docker detected: Docker version 28.1.1, build 4eba377
+2025-05-16 19:14:21,504 - docker_manager - INFO - Listing Docker images
+2025-05-16 19:14:21,912 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 19:14:21,985 - docker_manager - INFO - Container output raw: 
+2025-05-16 19:16:00,971 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-16 19:16:01,046 - docker_manager - INFO - Docker detected: Docker version 28.1.1, build 4eba377
+2025-05-16 19:16:01,419 - docker_manager - INFO - Listing Docker images
+2025-05-16 19:16:01,783 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 19:16:01,856 - docker_manager - INFO - Container output raw: 
+2025-05-16 19:33:56,719 - docker_manager - INFO - Created Docker project at data/dockerfiles\TEST
+2025-05-16 19:34:18,865 - docker_manager - INFO - Listing Docker images
+2025-05-16 19:34:20,763 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 19:34:20,838 - docker_manager - INFO - Container output raw: 
+2025-05-16 19:36:27,254 - docker_manager - INFO - Building Docker image with command: docker build -t test1 -f D:/git hub projects/cloud/data/dockerfiles/TEST/Dockerfile D:\git hub projects\cloud\data\dockerfiles\TEST
+2025-05-16 19:37:26,275 - docker_manager - INFO - Successfully built Docker image: test1
+2025-05-16 19:37:32,460 - docker_manager - INFO - Listing Docker images
+2025-05-16 19:38:30,676 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-16 19:38:30,750 - docker_manager - INFO - Docker detected: Docker version 28.1.1, build 4eba377
+2025-05-16 19:38:31,343 - docker_manager - INFO - Listing Docker images
+2025-05-16 19:38:31,907 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 19:38:32,010 - docker_manager - INFO - Container output raw: 
+2025-05-16 19:38:49,182 - docker_manager - INFO - Running container with command: docker run -p 8000 test1:latest
+2025-05-16 19:38:50,590 - docker_manager - INFO - Successfully started container: hello world
+2025-05-16 19:38:57,415 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 19:38:57,504 - docker_manager - INFO - Container output raw: c149e5b71f10	test1:latest	Exited (0) 7 seconds ago	goofy_ishizaka	
+
+2025-05-16 19:38:57,505 - docker_manager - INFO - Processing container line: c149e5b71f10	test1:latest	Exited (0) 7 seconds ago	goofy_ishizaka
+2025-05-16 19:40:26,379 - docker_manager - INFO - Searching DockerHub for: mongo
+2025-05-16 19:40:27,098 - docker_manager - INFO - Found 25 results on DockerHub for 'mongo'
+2025-05-16 19:40:31,862 - docker_manager - INFO - Pulling Docker image: mongo
+2025-05-16 19:42:28,330 - docker_manager - INFO - Successfully pulled image: mongo
+2025-05-16 19:42:31,783 - docker_manager - INFO - Listing Docker images
+2025-05-16 19:42:33,412 - docker_manager - INFO - Listing Docker images
+2025-05-16 19:42:41,435 - docker_manager - INFO - Running container with command: docker run -d -p 7500 mongo:latest
+2025-05-16 19:42:41,901 - docker_manager - INFO - Successfully started container: 5a537289c8169ea313ed53d96ab7b5ddde34b88ce54f94d1a3070892f5a3ae42
+2025-05-16 19:42:44,238 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 19:42:44,322 - docker_manager - INFO - Container output raw: 5a537289c816	mongo:latest	Up 2 seconds	vibrant_vaughan	27017/tcp, 0.0.0.0:63939->7500/tcp
+c149e5b71f10	test1:latest	Exited (0) 3 minutes ago	goofy_ishizaka	
+
+2025-05-16 19:42:44,323 - docker_manager - INFO - Processing container line: 5a537289c816	mongo:latest	Up 2 seconds	vibrant_vaughan	27017/tcp, 0.0.0.0:63939->7500/tcp
+2025-05-16 19:42:44,323 - docker_manager - INFO - Processing container line: c149e5b71f10	test1:latest	Exited (0) 3 minutes ago	goofy_ishizaka
+2025-05-16 19:43:24,134 - docker_manager - INFO - Stopping container: 5a537289c816
+2025-05-16 19:43:24,864 - docker_manager - INFO - Successfully stopped container: 5a537289c816
+2025-05-16 19:43:26,355 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 19:43:26,459 - docker_manager - INFO - Container output raw: 5a537289c816	mongo:latest	Exited (0) 2 seconds ago	vibrant_vaughan	
+c149e5b71f10	test1:latest	Exited (0) 4 minutes ago	goofy_ishizaka	
+
+2025-05-16 19:43:26,460 - docker_manager - INFO - Processing container line: 5a537289c816	mongo:latest	Exited (0) 2 seconds ago	vibrant_vaughan	
+2025-05-16 19:43:26,460 - docker_manager - INFO - Processing container line: c149e5b71f10	test1:latest	Exited (0) 4 minutes ago	goofy_ishizaka

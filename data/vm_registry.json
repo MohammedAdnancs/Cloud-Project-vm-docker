@@ -1,10 +1,10 @@
 {
-  "gsggsgs": {
-    "config_path": "data/vms\\gsggsgs.json",
-    "disk": "data/disks\\testmarch.qcow2",
-    "memory": 2688,
-    "cpus": 4,
+  "www": {
+    "config_path": "data/vms\\www.json",
+    "disk": "data/disks\\ww.qcow2",
+    "memory": 1024,
+    "cpus": 1,
     "iso": "data/isos\\alpine-standard-3.21.3-x86_64.iso",
-    "created_time": 1747315742.8258004
+    "created_time": 1747412190.602773
   }
 }

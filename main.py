@@ -170,15 +170,45 @@ class DiskManagerTab(QWidget):
         self.refresh_disks()
     
     def create_disk(self):
-        """Create a new virtual disk"""
+        """Create a new virtual disk with validation"""
         name = self.disk_name_input.text().strip()
         size = str(self.disk_size_input.value())
         unit = self.disk_size_unit.currentText()
         fmt = self.disk_format_select.currentText()
         
+        # Client-side validation
         if not name:
             QMessageBox.warning(self, "Error", "Please enter a disk name")
+            self.disk_name_input.setFocus()
             return
+            
+        # Check for invalid characters in disk name
+        import re
+        if not re.match(r'^[a-zA-Z0-9_\-\.]+$', name):
+            QMessageBox.warning(self, "Error", "Disk name can only contain letters, numbers, underscores, hyphens, and periods")
+            self.disk_name_input.setFocus()
+            return
+            
+        # Validate size
+        if self.disk_size_input.value() <= 0:
+            QMessageBox.warning(self, "Error", "Disk size must be greater than zero")
+            self.disk_size_input.setFocus()
+            return
+            
+        # Set reasonable upper limits based on unit to prevent UI errors
+        max_sizes = {'MB': 1024*10, 'GB': 1024, 'TB': 64}
+        current_unit = self.disk_size_unit.currentText()
+        if self.disk_size_input.value() > max_sizes.get(current_unit, 1024):
+            QMessageBox.warning(
+                self, 
+                "Large Disk Size", 
+                f"The disk size of {size}{unit[0]} exceeds recommended maximum of {max_sizes[current_unit]}{unit[0]}.\n\n"
+                "Are you sure you want to create this disk? It might fail or consume too much space.",
+                QMessageBox.Yes | QMessageBox.No
+            ) 
+            if QMessageBox.No:
+                self.disk_size_input.setFocus()
+                return
         
         # Convert size to QEMU format (e.g. 10G, 500M)
         size_str = size + unit[0]
@@ -459,18 +489,51 @@ class VMManagerTab(QWidget):
                     self.vm_iso_select.setCurrentIndex(index)
     
     def create_vm(self):
-        """Create a new virtual machine"""
+        """Create a new virtual machine with validation"""
         name = self.vm_name_input.text().strip()
         memory = self.vm_memory_input.value()
         cpus = self.vm_cpu_input.value()
         
+        # Client-side validation
         if not name:
             QMessageBox.warning(self, "Error", "Please enter a VM name")
+            self.vm_name_input.setFocus()
+            return
+            
+        # Check for invalid characters in VM name
+        import re
+        if not re.match(r'^[a-zA-Z0-9_\-\.]+$', name):
+            QMessageBox.warning(self, "Error", "VM name can only contain letters, numbers, underscores, hyphens, and periods")
+            self.vm_name_input.setFocus()
+            return
+        
+        # Validate memory and CPU
+        if memory <= 0:
+            QMessageBox.warning(self, "Error", "Memory must be greater than zero")
+            self.vm_memory_input.setFocus()
+            return
+            
+        if memory < 128:
+            QMessageBox.warning(self, "Error", "Memory must be at least 128MB")
+            self.vm_memory_input.setFocus()
+            return
+            
+        if cpus <= 0:
+            QMessageBox.warning(self, "Error", "CPU count must be greater than zero")
+            self.vm_cpu_input.setFocus()
+            return
+            
+        if cpus > 16:
+            QMessageBox.warning(self, "Error", "CPU count exceeds maximum allowed (16)")
+            self.vm_cpu_input.setFocus()
             return
         
         if self.vm_disk_select.count() == 0:
             QMessageBox.warning(self, "Error", "No disks available. Please create a disk first.")
             return
+        
+        # Refresh disk list to ensure we have the latest disks
+        self.refresh_disks()
         
         disk_name = self.vm_disk_select.currentText()
         
@@ -1256,7 +1319,6 @@ class DockerResourcesTab(QWidget):
             actions_layout.setContentsMargins(0, 0, 0, 0)
             actions_layout.setSpacing(8)  # Add space between buttons
             
-            # Common button style
             button_style = """
                 QPushButton {
                     background-color: #0078D7;
@@ -1813,6 +1875,8 @@ class MainWindow(QMainWindow):
 
         # Connect the disks_changed signal to the VM tab's refresh_disks method
         self.disk_tab.disks_changed.connect(self.vm_tab.refresh_disks)
+        # Also force the VM manager to reload its disk manager registry when disks change
+        self.disk_tab.disks_changed.connect(lambda: self.vm_manager.disk_manager._load_registry())
         
         # Set central widget
         self.setCentralWidget(self.tabs)
@@ -1913,6 +1977,8 @@ class MainWindow(QMainWindow):
     
     def show_create_vm(self):
         """Switch to the VM tab and focus on the create VM form"""
+        # Force refresh of the disk list before switching tabs
+        self.vm_tab.refresh_disks()
         self.tabs.setCurrentIndex(1)  # Switch to VM tab
         self.vm_tab.vm_name_input.setFocus()
     

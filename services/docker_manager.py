@@ -252,6 +252,10 @@ class DockerManager:
                     if line:  # Skip empty lines
                         parts = line.split('\t')
                         if len(parts) >= 4:
+                            # Skip .gitkeep entries or entries with .gitkeep in the name
+                            if '.gitkeep' in parts[0]:
+                                continue
+                                
                             image = {
                                 "name_tag": parts[0],
                                 "id": parts[1],
@@ -302,6 +306,10 @@ class DockerManager:
                         logger.info(f"Processing container line: {line}")
                         parts = line.split('\t')
                         if len(parts) >= 5:
+                            # Skip containers based on .gitkeep images
+                            if '.gitkeep' in parts[1]:  # parts[1] is the image name
+                                continue
+                                
                             container = {
                                 "id": parts[0],
                                 "image": parts[1],

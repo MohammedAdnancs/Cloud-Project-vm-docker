@@ -23,3 +23,10 @@
 2025-05-15 16:24:59,419 - disk_manager - WARNING - Disk fristvd no longer exists at data/disks\fristvd.qcow2. Removing from registry.
 2025-05-15 16:25:18,826 - disk_manager - INFO - Running command: qemu-img create -f qcow2 data/disks\testmarch.qcow2 10G
 2025-05-15 16:25:19,684 - disk_manager - INFO - Successfully created disk testmarch with size 10G and format qcow2
+2025-05-16 19:02:42,286 - disk_manager - WARNING - Disk testmarch no longer exists at data/disks\testmarch.qcow2. Removing from registry.
+2025-05-16 19:02:42,496 - disk_manager - INFO - Added existing disk .gitkeep to registry
+2025-05-16 19:13:05,028 - disk_manager - INFO - Running command: qemu-img create -f qcow2 data/disks\kk.qcow2 10G
+2025-05-16 19:13:05,294 - disk_manager - INFO - Successfully created disk kk with size 10G and format qcow2
+2025-05-16 19:14:26,830 - disk_manager - INFO - Successfully deleted disk kk
+2025-05-16 19:16:08,027 - disk_manager - INFO - Running command: qemu-img create -f qcow2 data/disks\ww.qcow2 10G
+2025-05-16 19:16:08,214 - disk_manager - INFO - Successfully created disk ww with size 10G and format qcow2

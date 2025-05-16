@@ -1,8 +1,8 @@
 {
-  "testmarch": {
-    "path": "data/disks\\testmarch.qcow2",
+  "ww": {
+    "path": "data/disks\\ww.qcow2",
     "format": "qcow2",
     "size": 10737418240,
-    "created_time": 1747315519.562086
+    "created_time": 1747412168.0907452
   }
 }

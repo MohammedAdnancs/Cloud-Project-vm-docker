@@ -3,6 +3,7 @@ import subprocess
 import json
 import logging
 import time
+import re
 
 from rich import _console
 from services.disk_manager import DiskManager
@@ -61,6 +62,10 @@ class VMManager:
         
         # Add entries for VM configs that exist but are not in the registry
         for filename in os.listdir(self.vms_dir):
+            # Skip .gitkeep files and other hidden files
+            if filename.startswith('.') or filename == '.gitkeep':
+                continue
+                
             if filename.endswith('.json'):
                 config_path = os.path.join(self.vms_dir, filename)
                 vm_name = os.path.splitext(filename)[0]
@@ -80,6 +85,10 @@ class VMManager:
                     except (json.JSONDecodeError, IOError) as e:
                         logger.warning(f"Could not load config for VM {vm_name}: {str(e)}. Skipping.")
         
+        # Remove any .gitkeep entries that might have been added previously
+        if ".gitkeep" in self.registry:
+            del self.registry[".gitkeep"]
+            
         # Save changes
         self._save_registry()
     
@@ -100,27 +109,94 @@ class VMManager:
         isos = []
         if os.path.exists(self.isos_dir):
             for file in os.listdir(self.isos_dir):
+                # Skip .gitkeep files and other hidden files
+                if file.startswith('.') or file == '.gitkeep':
+                    continue
+                    
                 if file.lower().endswith('.iso'):
                     isos.append(os.path.join(self.isos_dir, file))
         return isos
     
     def create_vm(self, vm_name, memory, cpus, disk_name, iso_path=None):
-        """Create a new VM configuration"""
+        """Create a new VM configuration with enhanced validation"""
+        # Validate VM name
+        if not vm_name:
+            logger.error("VM name cannot be empty")
+            return False, "VM name cannot be empty"
+            
+        # Check for invalid characters in VM name
+        if not re.match(r'^[a-zA-Z0-9_\-\.]+$', vm_name):
+            logger.error(f"VM name contains invalid characters: {vm_name}")
+            return False, "VM name can only contain letters, numbers, underscores, hyphens, and periods"
+            
+        # Check if VM name already exists
         if vm_name in self.registry:
             logger.error(f"VM {vm_name} already exists")
             return False, f"VM {vm_name} already exists"
-        
-
+            
+        # Validate memory
+        if not isinstance(memory, int):
+            try:
+                memory = int(memory)
+            except (ValueError, TypeError):
+                logger.error(f"Invalid memory value: {memory}")
+                return False, "Memory must be a valid integer"
+                
+        if memory <= 0:
+            logger.error(f"Memory must be positive: {memory}")
+            return False, "Memory must be greater than zero"
+            
+        if memory < 128:
+            logger.error(f"Memory too low: {memory}")
+            return False, "Memory must be at least 128 MB"
+            
+        if memory > 32768:  # 32 GB
+            logger.error(f"Memory value too high: {memory}")
+            return False, "Memory exceeds maximum allowed (32 GB)"
+            
+        # Validate CPUs
+        if not isinstance(cpus, int):
+            try:
+                cpus = int(cpus)
+            except (ValueError, TypeError):
+                logger.error(f"Invalid CPU count: {cpus}")
+                return False, "CPU count must be a valid integer"
+                
+        if cpus <= 0:
+            logger.error(f"CPU count must be positive: {cpus}")
+            return False, "CPU count must be greater than zero"
+            
+        if cpus > 16:
+            logger.error(f"CPU count too high: {cpus}")
+            return False, "CPU count exceeds maximum allowed (16)"
+            
         # Validate disk exists
+        if not disk_name:
+            logger.error("No disk specified")
+            return False, "You must specify a disk for the VM"
+            
+        # Force disk manager to refresh its registry to ensure newly created disks are recognized
+        self.disk_manager._load_registry()
+            
         disk_path = self.disk_manager.get_disk_path(disk_name)
         if not disk_path:
-            logger.error(f"Disk {disk_name} not found {disk_path}")
+            logger.error(f"Disk {disk_name} not found")
             return False, f"Disk {disk_name} not found"
+            
+        if not os.path.exists(disk_path):
+            logger.error(f"Disk file does not exist at {disk_path}")
+            return False, f"Disk file does not exist at {disk_path}"
         
         # Validate ISO if provided
-        if iso_path and not os.path.exists(iso_path):
-            logger.error(f"ISO file {iso_path} not found")
-            return False, f"ISO file {iso_path} not found"
+        if iso_path:
+            if not os.path.exists(iso_path):
+                logger.error(f"ISO file {iso_path} not found")
+                return False, f"ISO file {iso_path} not found"
+                
+            # Check if it's a valid ISO file
+            if not iso_path.lower().endswith('.iso'):
+                logger.warning(f"File {iso_path} does not have .iso extension")
+                return False, f"File {iso_path} does not appear to be a valid ISO file"
         
         # Create VM config
         config = {
@@ -133,7 +209,16 @@ class VMManager:
         }
         
         config_path = os.path.join(self.vms_dir, f"{vm_name}.json")
+        
+        # Check if config file already exists (even if not in registry)
+        if os.path.exists(config_path):
+            logger.error(f"Config file already exists at {config_path}")
+            return False, f"A configuration file already exists at {config_path}"
+            
         try:
+            # Ensure the VM directory exists
+            os.makedirs(os.path.dirname(config_path), exist_ok=True)
+            
             with open(config_path, 'w') as f:
                 json.dump(config, f, indent=2)
             
@@ -156,18 +241,34 @@ class VMManager:
             return False, f"Error creating VM config: {str(e)}"
     
     def start_vm(self, vm_name):
-        """Start a virtual machine"""
+        """Start a virtual machine with enhanced validation"""
+        # Validate VM name
+        if not vm_name:
+            logger.error("VM name cannot be empty")
+            return False, "VM name cannot be empty"
+            
         if vm_name not in self.registry:
             logger.error(f"VM {vm_name} not found")
             return False, f"VM {vm_name} not found"
         
         config_path = self.registry[vm_name]['config_path']
+        if not os.path.exists(config_path):
+            logger.error(f"VM config file not found at {config_path}")
+            return False, f"VM configuration file not found at {config_path}"
+            
         try:
             with open(config_path, 'r') as f:
                 config = json.load(f)
         except Exception as e:
             logger.error(f"Failed to load VM config: {str(e)}")
             return False, f"Failed to load VM config: {str(e)}"
+        
+        # Validate required config fields
+        required_fields = ['memory', 'cpus', 'disk']
+        for field in required_fields:
+            if field not in config or not config[field]:
+                logger.error(f"Missing required field in VM config: {field}")
+                return False, f"Invalid VM configuration: missing {field}"
         
         # Build the QEMU command
         cmd = ['qemu-system-x86_64']
@@ -177,7 +278,8 @@ class VMManager:
         
         # Add CPUs
         cmd.extend(['-smp', str(config['cpus'])])
-          # Add disk
+          
+        # Add disk
         if not os.path.exists(config['disk']):
             logger.error(f"Disk {config['disk']} not found")
             return False, f"Disk {config['disk']} not found"
@@ -246,7 +348,12 @@ class VMManager:
             return False, f"Error starting VM: {str(e)}"
     
     def delete_vm(self, vm_name):
-        """Delete a VM configuration (does not delete the disk)"""
+        """Delete a virtual machine configuration"""
+        # Validate VM name
+        if not vm_name:
+            logger.error("VM name cannot be empty")
+            return False, "VM name cannot be empty"
+            
         if vm_name not in self.registry:
             logger.error(f"VM {vm_name} not found")
             return False, f"VM {vm_name} not found"
@@ -254,11 +361,19 @@ class VMManager:
         config_path = self.registry[vm_name]['config_path']
         
         try:
-            os.remove(config_path)
+            # Check if the file exists before trying to delete it
+            if os.path.exists(config_path):
+                os.remove(config_path)
+            else:
+                logger.warning(f"VM config file not found at {config_path}")
+                
+            # Remove from registry regardless
             del self.registry[vm_name]
             self._save_registry()
+            
             logger.info(f"Successfully deleted VM {vm_name}")
             return True, f"Successfully deleted VM {vm_name}"
+            
         except Exception as e:
             logger.error(f"Failed to delete VM {vm_name}: {str(e)}")
             return False, f"Failed to delete VM {vm_name}: {str(e)}"
