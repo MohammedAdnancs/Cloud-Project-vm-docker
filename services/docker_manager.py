@@ -146,6 +146,7 @@ class DockerManager:
         except Exception as e:
             logger.error(f"Error creating Dockerfile: {str(e)}")
             return False, f"Error creating Dockerfile: {str(e)}", None
+    
     def build_image(self, dockerfile_path=None, image_name=None):
         """
         Build a Docker image from a Dockerfile.
@@ -272,6 +273,7 @@ class DockerManager:
         except Exception as e:
             logger.error(f"Error listing Docker images: {str(e)}")
             return False, f"Error listing Docker images: {str(e)}", []
+    
     def list_containers(self, show_all=True):
         """
         List Docker containers.
@@ -447,29 +449,215 @@ class DockerManager:
             logger.error(f"Error searching DockerHub: {str(e)}")
             return False, f"Error searching DockerHub: {str(e)}", []
     
-    def pull_image(self, image_name=None):
+    def pull_image(self, image_name=None, progress_callback=None):
+        """
+        Pull a Docker image with progress reporting.
+        
+        Args:
+            image_name (str, optional): Name of the image to pull. If None, prompts user.
+            progress_callback (function, optional): Callback function to report progress.
+                                                   Will be called with values from 0-100.
+            
+        Returns:
+            tuple: (success (bool), message (str))
+        """
         try:
             # Get image name if not provided
             if image_name is None:
                 image_name = input("Enter image name to pull (e.g., nginx:latest): ")
             
-            # Pull the image
+            # Pull the image with progress reporting
             cmd = ["docker", "pull", image_name]
             logger.info(f"Pulling Docker image: {image_name}")
             print(f"Pulling image {image_name}...")
             
-            process = subprocess.run(cmd, capture_output=True, text=True)
+            # Use Popen instead of run to get real-time output
+            process = subprocess.Popen(
+                cmd,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                universal_newlines=True,
+                bufsize=1
+            )
+            
+            # Variables to track progress
+            layers = {}
+            total_layers = 0
+            layers_discovered = False
+            layers_downloading = False
+            layers_complete = 0
+            overall_progress = 0
+            last_reported_progress = -1  # To avoid repeated identical progress reports
+            
+            # Process the output line by line
+            for line in iter(process.stdout.readline, ''):
+                # Log each line for debugging
+                logger.debug(f"Docker pull output: {line.strip()}")
+                
+                if not line.strip():
+                    continue  # Skip empty lines
+                
+                if progress_callback:
+                    # Check if this is the initial "Pulling from" line which marks the start
+                    if ': Pulling from ' in line:
+                        # Just starting, report minimal progress
+                        progress_callback(1)
+                    
+                    # Check if the line contains layer count information
+                    if not layers_discovered and "Pulling fs layer" in line:
+                        total_layers += 1
+                        layers_discovered = True
+                        # Report initial progress as we're now discovering layers
+                        progress_callback(2)
+                    
+                    # Track layer status
+                    layer_id = None
+                    
+                    # Get layer ID from line
+                    if ': ' in line:
+                        layer_id = line.split(':', 1)[0].strip()
+                    
+                    # Process different status messages:
+                    if ': Downloading' in line:
+                        layers_downloading = True
+                        
+                        # Extract layer ID and progress
+                        parts = line.split(': Downloading')
+                        if parts and len(parts) >= 1:
+                            layer_id = parts[0].strip()
+                            
+                            # Parse the progress indicator [=====>   ]
+                            progress_text = parts[1] if len(parts) > 1 else ""
+                            if '[' in progress_text and ']' in progress_text:
+                                try:
+                                    # Try to extract percentage directly from progress bar
+                                    bar_parts = progress_text.split('[')[1].split(']')[0]
+                                    filled_ratio = bar_parts.count('=') / (len(bar_parts) - 1)  # -1 for the '>' character
+                                    layer_progress = filled_ratio * 100
+                                    layers[layer_id] = layer_progress
+                                except (ValueError, IndexError, ZeroDivisionError):
+                                    # Fallback: extract numeric values (e.g., 100MB/200MB)
+                                    try:
+                                        size_parts = progress_text.split(']', 1)[1].strip().split('/')
+                                        if len(size_parts) == 2:
+                                            current = self._parse_size(size_parts[0].strip())
+                                            total = self._parse_size(size_parts[1].strip())
+                                            
+                                            if total > 0:
+                                                layer_progress = (current / total) * 100
+                                                layers[layer_id] = layer_progress
+                                    except (ValueError, IndexError):
+                                        # If all parsing fails, just mark as in progress
+                                        if layer_id and layer_id not in layers:
+                                            layers[layer_id] = 10  # Default starting progress
+                    
+                    # Check for various layer status messages
+                    elif ': Waiting' in line and layer_id:
+                        # Layer is waiting to start
+                        if layer_id not in layers:
+                            layers[layer_id] = 0
+                            
+                    elif ': Verifying Checksum' in line and layer_id:
+                        # Layer download complete, verifying
+                        layers[layer_id] = 90
+                        
+                    elif ': Download complete' in line and layer_id:
+                        # Layer downloaded completely
+                        layers[layer_id] = 95
+                    
+                    elif ': Extracting' in line and layer_id:
+                        # Layer being extracted
+                        parts = line.split(': Extracting')
+                        if parts and len(parts) >= 1:
+                            layer_id = parts[0].strip()
+                            
+                            # Parse the progress indicator [=====>   ]
+                            progress_text = parts[1] if len(parts) > 1 else ""
+                            if '[' in progress_text and ']' in progress_text:
+                                # Try to get percentage based on progress bar
+                                try:
+                                    bar_parts = progress_text.split('[')[1].split(']')[0]
+                                    filled_ratio = bar_parts.count('=') / (len(bar_parts) - 1)  # -1 for the '>' character
+                                    # Extracting is between 80-99%
+                                    layer_progress = 80 + (filled_ratio * 19)
+                                    layers[layer_id] = layer_progress
+                                except (ValueError, IndexError, ZeroDivisionError):
+                                    # Just set a default value
+                                    layers[layer_id] = 85
+                                        
+                    elif ': Pull complete' in line and layer_id:
+                        # Mark layer as complete
+                        parts = line.split(': Pull complete')
+                        if parts and len(parts) >= 1:
+                            layer_id = parts[0].strip()
+                            layers[layer_id] = 100
+                            layers_complete += 1
+                    
+                    # Calculate overall progress
+                    if layers:
+                        # First pass: if we're discovering layers, base progress on discovery (0-10%)
+                        if total_layers > 0 and not layers_downloading:
+                            overall_progress = min(10, (len(layers) / total_layers) * 10)
+                        # Second pass: If downloading has started, calculate based on layer completeness
+                        else:
+                            # Get average progress of known layers
+                            layer_values = list(layers.values())
+                            if layer_values:
+                                layer_avg_progress = sum(layer_values) / len(layer_values)
+                                
+                                # If we know total layers, weight by completion percentage
+                                if total_layers > 0:
+                                    completion_weight = len(layers) / total_layers
+                                    overall_progress = layer_avg_progress * completion_weight
+                                else:
+                                    overall_progress = layer_avg_progress
+                            
+                            # Boost progress if we have completed layers
+                            if layers_complete > 0 and total_layers > 0:
+                                complete_percentage = (layers_complete / total_layers) * 100
+                                # Weight the completed percentage with the average progress
+                                overall_progress = (complete_percentage * 0.7) + (overall_progress * 0.3)
+                        
+                        # Ensure progress stays within 0-100 range and increases monotonically
+                        overall_progress = min(max(overall_progress, 0), 99)  # Cap at 99% until fully done
+                        
+                        # Only report progress if it has changed significantly (avoid progress bar flickering)
+                        current_progress = int(overall_progress)
+                        if current_progress > last_reported_progress:
+                            last_reported_progress = current_progress
+                            progress_callback(current_progress)
+            
+            # Wait for process to complete
+            process.wait()
             
             if process.returncode == 0:
+                # Ensure we show 100% at the end
+                if progress_callback:
+                    progress_callback(100)
                 logger.info(f"Successfully pulled image: {image_name}")
                 return True, f"Successfully pulled image: {image_name}"
             else:
-                logger.error(f"Failed to pull image: {process.stderr}")
-                return False, f"Failed to pull image: {process.stderr}"
+                error = process.stderr.read()
+                logger.error(f"Failed to pull image: {error}")
+                return False, f"Failed to pull image: {error}"
                 
         except Exception as e:
             logger.error(f"Error pulling image: {str(e)}")
             return False, f"Error pulling image: {str(e)}"
+    
+    def _parse_size(self, size_str):
+        """Helper to parse size strings like 100MB, 1.2GB, etc."""
+        try:
+            if 'KB' in size_str:
+                return float(size_str.replace('KB', '')) * 1024
+            elif 'MB' in size_str:
+                return float(size_str.replace('MB', '')) * 1024 * 1024
+            elif 'GB' in size_str:
+                return float(size_str.replace('GB', '')) * 1024 * 1024 * 1024
+            else:
+                return float(size_str)
+        except ValueError:
+            return 0
 
     def run_container(self, image_name=None, container_name=None, ports=None, volumes=None, environment=None, detach=True):
         """

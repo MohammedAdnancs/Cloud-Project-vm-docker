@@ -1,6 +1,7 @@
 import sys
 import os
 import logging
+import time
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QTabWidget, QWidget, QVBoxLayout,
     QHBoxLayout, QLabel, QLineEdit, QComboBox, QPushButton, QSpinBox,
@@ -65,6 +66,65 @@ class WorkerThread(QThread):
         except Exception as e:
             logger.error(f"Error in worker thread: {str(e)}")
             self.finished.emit(False, f"Operation failed: {str(e)}")
+
+class DockerPullWorker(QThread):
+    """Worker thread for pulling Docker images with progress updates"""
+    progress = pyqtSignal(int)
+    status = pyqtSignal(str)
+    finished = pyqtSignal(bool, str)
+    
+    def __init__(self, docker_manager, image_name):
+        super().__init__()
+        self.docker_manager = docker_manager
+        self.image_name = image_name
+        self.last_progress = 0
+        self.last_status_update = time.time()
+    
+    def progress_callback(self, value):
+        # Emit progress signal
+        self.progress.emit(value)
+        
+        # Update status text based on progress value
+        current_time = time.time()
+        if value != self.last_progress or (current_time - self.last_status_update) >= 1.0:
+            status_text = "Starting download..."
+            if value < 10:
+                status_text = "Preparing to download..."
+            elif value < 30:
+                status_text = "Downloading image layers..."
+            elif value < 60:
+                status_text = "Downloading and extracting layers..."
+            elif value < 90:
+                status_text = "Extracting and processing layers..."
+            elif value < 100:
+                status_text = "Almost complete..."
+            else:
+                status_text = "Download complete!"
+            
+            self.status.emit(status_text)
+            self.last_status_update = current_time
+            self.last_progress = value
+    
+    def run(self):
+        try:
+            # Send initial status update
+            self.status.emit("Connecting to Docker registry...")
+            
+            success, message = self.docker_manager.pull_image(
+                self.image_name, 
+                progress_callback=self.progress_callback
+            )
+            
+            # Final status update
+            if success:
+                self.status.emit("Download complete!")
+            else:
+                self.status.emit("Error during download")
+                
+            self.finished.emit(success, message)
+        except Exception as e:
+            self.status.emit("Error during download")
+            self.finished.emit(False, f"Error pulling image: {str(e)}")
 
 class DiskManagerTab(QWidget):
     """Tab for managing virtual disks"""
@@ -1159,17 +1219,13 @@ class DockerResourcesTab(QWidget):
         refresh_images_btn.clicked.connect(self.refresh_images)
         images_actions_layout.addWidget(refresh_images_btn)
         
-        pull_image_btn = QPushButton("Pull Image")
-        pull_image_btn.clicked.connect(self.pull_image)
-        images_actions_layout.addWidget(pull_image_btn)
-        
         search_local_btn = QPushButton("Search Local")
         search_local_btn.clicked.connect(self.search_local_images)
         images_actions_layout.addWidget(search_local_btn)
-        
         search_hub_btn = QPushButton("Search DockerHub")
         search_hub_btn.clicked.connect(self.search_dockerhub)
         images_actions_layout.addWidget(search_hub_btn)
+    
         
         images_layout.addLayout(images_actions_layout)
         
@@ -1371,8 +1427,7 @@ class DockerResourcesTab(QWidget):
             actions_widget.setLayout(actions_layout)
             self.containers_table.setCellWidget(row, 5, actions_widget)
             
-            row += 1
-   
+            row += 1      
     def pull_image(self):
         """Pull a Docker image from a registry"""
         image_name, ok = QInputDialog.getText(
@@ -1381,20 +1436,51 @@ class DockerResourcesTab(QWidget):
         )
         
         if ok and image_name:
-            # Disable UI during pull
-            QApplication.setOverrideCursor(Qt.WaitCursor)
+            # Create a progress dialog
+            progress_dialog = QDialog(self)
+            progress_dialog.setWindowTitle(f"Pulling Docker Image: {image_name}")
+            progress_dialog.setMinimumWidth(400)
+            progress_dialog.setFixedHeight(120)
+            progress_dialog.setModal(True)  # Make dialog modal to prevent interaction with main window
             
-            # Pull the image
-            success, message = self.docker_manager.pull_image(image_name)
+            # Add progress bar to dialog
+            dialog_layout = QVBoxLayout()
+            progress_label = QLabel(f"Downloading image: {image_name}")
+            progress_bar = QProgressBar()
+            progress_bar.setRange(0, 100)
+            progress_bar.setValue(0)
             
-            # Restore cursor
-            QApplication.restoreOverrideCursor()
+            dialog_layout.addWidget(progress_label)
+            dialog_layout.addWidget(progress_bar)
             
-            if success:
-                QMessageBox.information(self, "Success", message)
-                self.refresh_images()
-            else:
-                QMessageBox.warning(self, "Error", message)
+            # Add status label below progress bar
+            status_label = QLabel("Connecting to Docker registry...")
+            dialog_layout.addWidget(status_label)
+            
+            progress_dialog.setLayout(dialog_layout)
+            
+            # Create worker thread for image pull
+            self.pull_worker = DockerPullWorker(self.docker_manager, image_name)
+            
+            # Connect signals
+            self.pull_worker.progress.connect(progress_bar.setValue)
+            self.pull_worker.status.connect(status_label.setText)
+            self.pull_worker.finished.connect(lambda success, message: self.on_pull_completed(success, message, progress_dialog))
+            
+            # Show dialog and start worker
+            progress_dialog.show()
+            self.pull_worker.start()
+            
+    def on_pull_completed(self, success, message, dialog):
+        """Handle Docker image pull result"""
+        # Close the progress dialog
+        dialog.accept()
+        
+        if success:
+            QMessageBox.information(self, "Success", message)
+            self.refresh_images()
+        else:
+            QMessageBox.warning(self, "Error", message)
     
     def search_local_images(self):
         """Search for local Docker images"""
@@ -1537,27 +1623,46 @@ class DockerResourcesTab(QWidget):
                 dialog.setLayout(dialog_layout)
                 dialog.exec_()
             else:
-                QMessageBox.warning(self, "Error", message)
-    
+                QMessageBox.warning(self, "Error", message)      
     def pull_hub_image(self, image_name, dialog=None):
         """Pull an image from DockerHub (from the search results dialog)"""
         if dialog:
             dialog.accept()  # Close the dialog
         
-        # Disable UI during pull
-        QApplication.setOverrideCursor(Qt.WaitCursor)
+        # Create a progress dialog
+        progress_dialog = QDialog(self)
+        progress_dialog.setWindowTitle(f"Pulling Docker Image: {image_name}")
+        progress_dialog.setMinimumWidth(400)
+        progress_dialog.setFixedHeight(120)
+        progress_dialog.setModal(True)  # Make dialog modal to prevent interaction with main window
         
-        # Pull the image
-        success, message = self.docker_manager.pull_image(image_name)
+        # Add progress bar to dialog
+        dialog_layout = QVBoxLayout()
+        progress_label = QLabel(f"Downloading image: {image_name}")
+        progress_bar = QProgressBar()
+        progress_bar.setRange(0, 100)
+        progress_bar.setValue(0)
         
-        # Restore cursor
-        QApplication.restoreOverrideCursor()
+        dialog_layout.addWidget(progress_label)
+        dialog_layout.addWidget(progress_bar)
         
-        if success:
-            QMessageBox.information(self, "Success", message)
-            self.refresh_images()        
-        else:
-            QMessageBox.warning(self, "Error", message)
+        # Add status label below progress bar
+        status_label = QLabel("Connecting to Docker registry...")
+        dialog_layout.addWidget(status_label)
+        
+        progress_dialog.setLayout(dialog_layout)
+        
+        # Create worker thread for image pull
+        self.pull_worker = DockerPullWorker(self.docker_manager, image_name)
+        
+        # Connect signals directly to UI elements
+        self.pull_worker.progress.connect(progress_bar.setValue)
+        self.pull_worker.status.connect(status_label.setText)
+        self.pull_worker.finished.connect(lambda success, message: self.on_pull_completed(success, message, progress_dialog))
+        
+        # Show dialog and start worker
+        progress_dialog.show()
+        self.pull_worker.start()
     
     def stop_container(self, container_id):
         """Stop a running Docker container"""
