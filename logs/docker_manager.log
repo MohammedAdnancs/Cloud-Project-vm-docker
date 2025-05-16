@@ -887,3 +887,63 @@ c149e5b71f10	test1:latest	Exited (0) 4 minutes ago	goofy_ishizaka
 
 2025-05-16 19:43:26,460 - docker_manager - INFO - Processing container line: 5a537289c816	mongo:latest	Exited (0) 2 seconds ago	vibrant_vaughan	
 2025-05-16 19:43:26,460 - docker_manager - INFO - Processing container line: c149e5b71f10	test1:latest	Exited (0) 4 minutes ago	goofy_ishizaka
+2025-05-16 19:49:20,451 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-16 19:49:20,719 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-16 19:49:21,793 - docker_manager - INFO - Listing Docker images
+2025-05-16 19:49:21,984 - docker_manager - ERROR - Failed to list Docker images: error during connect: Head "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/_ping": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+2025-05-16 19:49:25,403 - docker_manager - ERROR - Docker is not accessible: ERROR: error during connect: Get "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.48/info": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+errors pretty printing info
+
+2025-05-16 19:53:42,544 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-16 19:53:42,613 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-16 19:53:43,182 - docker_manager - INFO - Listing Docker images
+2025-05-16 19:53:43,485 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 19:53:43,593 - docker_manager - INFO - Container output raw: 1942378e0ad8	my_third_image:latest	Exited (2) 46 hours ago	busy_heyrovsky	
+87f5ecadea44	my_second_image:latest	Exited (2) 47 hours ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 2 days ago	firstcontainer	
+
+2025-05-16 19:53:43,594 - docker_manager - INFO - Processing container line: 1942378e0ad8	my_third_image:latest	Exited (2) 46 hours ago	busy_heyrovsky	
+2025-05-16 19:53:43,594 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 47 hours ago	vigorous_khayyam	
+2025-05-16 19:53:43,595 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 2 days ago	firstcontainer
+2025-05-16 19:54:48,311 - docker_manager - INFO - Building Docker image with command: docker build -t foimage -f D:/University/semester 8/Cloud/Project/cloud/data/dockerfiles/secondfile/Dockerfile D:\University\semester 8\Cloud\Project\cloud\data\dockerfiles\secondfile
+2025-05-16 19:54:50,853 - docker_manager - INFO - Successfully built Docker image: foimage
+2025-05-16 19:54:53,731 - docker_manager - INFO - Listing Docker images
+2025-05-16 19:58:16,876 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-16 19:58:16,922 - docker_manager - INFO - Docker detected: Docker version 28.0.4, build b8034c0
+2025-05-16 19:58:17,495 - docker_manager - INFO - Listing Docker images
+2025-05-16 19:58:17,767 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 19:58:17,840 - docker_manager - INFO - Container output raw: 1942378e0ad8	my_third_image:latest	Exited (2) 46 hours ago	busy_heyrovsky	
+87f5ecadea44	my_second_image:latest	Exited (2) 47 hours ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 2 days ago	firstcontainer	
+
+2025-05-16 19:58:17,841 - docker_manager - INFO - Processing container line: 1942378e0ad8	my_third_image:latest	Exited (2) 46 hours ago	busy_heyrovsky	
+2025-05-16 19:58:17,841 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 47 hours ago	vigorous_khayyam	
+2025-05-16 19:58:17,841 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 2 days ago	firstcontainer
+2025-05-16 19:59:33,148 - docker_manager - INFO - Building Docker image with command: docker build -t lmao22 -f D:/University/semester 8/Cloud/Project/cloud/data/dockerfiles/secondfile/Dockerfile D:\University\semester 8\Cloud\Project\cloud\data\dockerfiles\secondfile
+2025-05-16 19:59:34,909 - docker_manager - INFO - Successfully built Docker image: lmao22
+2025-05-16 19:59:41,741 - docker_manager - INFO - Listing Docker images
+2025-05-16 19:59:46,528 - docker_manager - INFO - Listing Docker images
+2025-05-16 19:59:48,050 - docker_manager - INFO - Listing Docker images
+2025-05-16 20:00:08,492 - docker_manager - INFO - Running container with command: docker run -d -p 8000 lmao22:latest
+2025-05-16 20:00:09,044 - docker_manager - INFO - Successfully started container: b74d381094fc8ef34e4a56386e52710f837ec96ac59c3999e3a1790e25db4ff5
+2025-05-16 20:00:10,058 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 20:00:10,127 - docker_manager - INFO - Container output raw: b74d381094fc	lmao22:latest	Exited (2) Less than a second ago	intelligent_wiles	
+1942378e0ad8	my_third_image:latest	Exited (2) 46 hours ago	busy_heyrovsky	
+87f5ecadea44	my_second_image:latest	Exited (2) 47 hours ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 2 days ago	firstcontainer	
+
+2025-05-16 20:00:10,127 - docker_manager - INFO - Processing container line: b74d381094fc	lmao22:latest	Exited (2) Less than a second ago	intelligent_wiles	
+2025-05-16 20:00:10,127 - docker_manager - INFO - Processing container line: 1942378e0ad8	my_third_image:latest	Exited (2) 46 hours ago	busy_heyrovsky	
+2025-05-16 20:00:10,128 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 47 hours ago	vigorous_khayyam	
+2025-05-16 20:00:10,128 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 2 days ago	firstcontainer
+2025-05-16 20:01:16,152 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 20:01:16,211 - docker_manager - INFO - Container output raw: b74d381094fc	lmao22:latest	Exited (2) About a minute ago	intelligent_wiles	
+1942378e0ad8	my_third_image:latest	Exited (2) 46 hours ago	busy_heyrovsky	
+87f5ecadea44	my_second_image:latest	Exited (2) 47 hours ago	vigorous_khayyam	
+e344d43235fe	my_first_image:latest	Exited (0) 2 days ago	firstcontainer	
+
+2025-05-16 20:01:16,212 - docker_manager - INFO - Processing container line: b74d381094fc	lmao22:latest	Exited (2) About a minute ago	intelligent_wiles	
+2025-05-16 20:01:16,212 - docker_manager - INFO - Processing container line: 1942378e0ad8	my_third_image:latest	Exited (2) 46 hours ago	busy_heyrovsky	
+2025-05-16 20:01:16,212 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 47 hours ago	vigorous_khayyam	
+2025-05-16 20:01:16,212 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 2 days ago	firstcontainer

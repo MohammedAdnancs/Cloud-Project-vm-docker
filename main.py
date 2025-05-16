@@ -1012,73 +1012,7 @@ class DockerManagerTab(QWidget):
         self.worker.progress.connect(self.update_build_progress)
         self.worker.finished.connect(self.on_image_built)
         self.worker.start()
-    
-    def refresh_images(self):
-        """Refresh the list of Docker images"""
-        success, message, images = self.docker_manager.list_images()
-        
-        self.images_table.setRowCount(0)
-        
-        if not success:
-            QMessageBox.warning(self, "Error", message)
-            return
-        
-        row = 0
-        for image in images:
-            self.images_table.insertRow(row)
-            
-            # Name:Tag
-            self.images_table.setItem(row, 0, QTableWidgetItem(image['name_tag']))
-            
-            # ID
-            self.images_table.setItem(row, 1, QTableWidgetItem(image['id']))
-            
-            # Size
-            self.images_table.setItem(row, 2, QTableWidgetItem(image['size']))
-            
-            # Created
-            self.images_table.setItem(row, 3, QTableWidgetItem(image['created_at']))
-            
-            # Actions
-            actions_widget = QWidget()
-            actions_layout = QHBoxLayout()
-            actions_layout.setContentsMargins(0, 0, 0, 0)
-            actions_layout.setSpacing(8)  # Add space between buttons
-            
-            # Common button style
-            button_style = """
-                QPushButton {
-                    background-color: #0078D7;
-                    color: white;
-                    font-weight: bold;
-                    border: none;
-                    padding: 5px 10px;
-                    border-radius: 4px;
-                }
-                QPushButton:hover {
-                    background-color: #005A9E;
-                }
-                QPushButton:pressed {
-                    background-color: #003E73;
-                }
-            """
-            
-            run_btn = QPushButton("Run")
-            run_btn.setStyleSheet(button_style)
-            run_btn.clicked.connect(lambda checked, img=image['name_tag']: self.run_container_from_image(img))
-            
-            delete_btn = QPushButton("Delete")
-            delete_btn.setStyleSheet(button_style.replace("#0078D7", "#D83B01").replace("#005A9E", "#A42600").replace("#003E73", "#750B1C"))
-            delete_btn.clicked.connect(lambda checked, img_id=image['id']: self.delete_image(img_id))
-            
-            actions_layout.addWidget(run_btn)
-            actions_layout.addWidget(delete_btn)
-            actions_widget.setLayout(actions_layout)
-            
-            self.images_table.setCellWidget(row, 4, actions_widget)
-            
-            row += 1
-            
+         
     def refresh_containers(self):
 
         """Refresh the list of Docker containers (always showing all containers)"""
@@ -1195,7 +1129,6 @@ class DockerManagerTab(QWidget):
                 
             self.build_dockerfile_path.clear()
             self.image_name_input.clear()
-            self.refresh_images()
         else:
             QMessageBox.warning(self, "Error", message)
 

@@ -48,3 +48,5 @@
 2025-05-16 19:25:19,840 - vm_manager - INFO - Starting VM www with command: qemu-system-x86_64 -m 1024 -smp 1 -drive file=data/disks\ww.qcow2,format=qcow2 -display gtk
 2025-05-16 19:27:09,843 - vm_manager - INFO - Using disk data/disks\ww.qcow2 with format qcow2
 2025-05-16 19:27:09,844 - vm_manager - INFO - Starting VM www with command: qemu-system-x86_64 -m 1024 -smp 1 -drive file=data/disks\ww.qcow2,format=qcow2 -display gtk
+2025-05-16 19:49:20,432 - vm_manager - WARNING - VM config for www no longer exists at data/vms\www.json. Removing from registry.
+2025-05-16 19:49:20,450 - vm_manager - INFO - Added existing VM firstvm to registry

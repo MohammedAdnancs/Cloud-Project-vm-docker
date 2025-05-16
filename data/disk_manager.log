@@ -30,3 +30,5 @@
 2025-05-16 19:14:26,830 - disk_manager - INFO - Successfully deleted disk kk
 2025-05-16 19:16:08,027 - disk_manager - INFO - Running command: qemu-img create -f qcow2 data/disks\ww.qcow2 10G
 2025-05-16 19:16:08,214 - disk_manager - INFO - Successfully created disk ww with size 10G and format qcow2
+2025-05-16 19:49:19,570 - disk_manager - WARNING - Disk ww no longer exists at data/disks\ww.qcow2. Removing from registry.
+2025-05-16 19:49:20,414 - disk_manager - INFO - Added existing disk fristvd to registry
