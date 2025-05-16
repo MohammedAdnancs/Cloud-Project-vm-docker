@@ -1162,3 +1162,780 @@ e344d43235fe	my_first_image:latest	Exited (0) 2 days ago	firstcontainer
 2025-05-16 21:12:33,849 - docker_manager - INFO - Processing container line: 87f5ecadea44	my_second_image:latest	Exited (2) 2 days ago	vigorous_khayyam	
 2025-05-16 21:12:33,849 - docker_manager - INFO - Processing container line: e344d43235fe	my_first_image:latest	Exited (0) 2 days ago	firstcontainer
 2025-05-16 21:12:37,244 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:21:18,540 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:18,540 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:18,542 - docker_manager - INFO - Building Docker image with command: docker build -t test-image:latest -f test_data\dockerfiles\build_test\Dockerfile D:\git hub projects\cloud\test_data\dockerfiles\build_test
+2025-05-16 21:21:18,543 - docker_manager - INFO - Successfully built Docker image: test-image:latest
+2025-05-16 21:21:18,549 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:18,550 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:18,551 - docker_manager - INFO - Created Dockerfile at test_data\dockerfiles\TestDockerfile
+2025-05-16 21:21:18,555 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:18,556 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:18,558 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\test_project
+2025-05-16 21:21:18,567 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:18,567 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:18,568 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\minimal_project
+2025-05-16 21:21:18,571 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:18,572 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:18,574 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:21:18,574 - docker_manager - INFO - Container output raw: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+789012	nginx:latest	Exited (0) 3 hours ago	webserver	
+2025-05-16 21:21:18,575 - docker_manager - INFO - Processing container line: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:21:18,575 - docker_manager - INFO - Processing container line: 789012	nginx:latest	Exited (0) 3 hours ago	webserver
+2025-05-16 21:21:18,580 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:18,581 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:18,582 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:21:18,585 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:18,585 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:18,586 - docker_manager - INFO - Removing container: 123456
+2025-05-16 21:21:18,586 - docker_manager - INFO - Successfully removed container: 123456
+2025-05-16 21:21:18,591 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:18,591 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:18,592 - docker_manager - INFO - Running container with command: docker run -d --name test-container -p 8080:80 python:3.9
+2025-05-16 21:21:18,593 - docker_manager - INFO - Successfully started container: 123456789abcdef
+2025-05-16 21:21:18,598 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:18,599 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:18,600 - docker_manager - INFO - Searching DockerHub for: python
+2025-05-16 21:21:18,600 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: NAME                          DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+2025-05-16 21:21:18,601 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: python                        Python is an interpreted, interactive, objec…   8112      [OK]       
+2025-05-16 21:21:18,602 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: python/someimage             A Python image with additional tools           123                  [OK]
+2025-05-16 21:21:18,602 - docker_manager - INFO - Found 0 results on DockerHub for 'python'
+2025-05-16 21:21:18,606 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:18,607 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:18,608 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:21:18,609 - docker_manager - INFO - Found 1 images matching 'python'
+2025-05-16 21:21:18,612 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:18,612 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:18,613 - docker_manager - INFO - Starting container: 123456
+2025-05-16 21:21:18,613 - docker_manager - INFO - Successfully started container: 123456
+2025-05-16 21:21:18,619 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:18,619 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:18,620 - docker_manager - INFO - Stopping container: 123456
+2025-05-16 21:21:18,621 - docker_manager - INFO - Successfully stopped container: 123456
+2025-05-16 21:21:57,826 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:57,827 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:57,828 - docker_manager - INFO - Building Docker image with command: docker build -t test-image:latest -f test_data\dockerfiles\build_test\Dockerfile D:\git hub projects\cloud\test_data\dockerfiles\build_test
+2025-05-16 21:21:57,829 - docker_manager - INFO - Successfully built Docker image: test-image:latest
+2025-05-16 21:21:57,834 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:57,835 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:57,836 - docker_manager - INFO - Created Dockerfile at test_data\dockerfiles\TestDockerfile
+2025-05-16 21:21:57,842 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:57,842 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:57,845 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\test_project
+2025-05-16 21:21:57,849 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:57,849 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:57,850 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\minimal_project
+2025-05-16 21:21:57,854 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:57,855 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:57,856 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:21:57,857 - docker_manager - INFO - Container output raw: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+789012	nginx:latest	Exited (0) 3 hours ago	webserver	
+2025-05-16 21:21:57,857 - docker_manager - INFO - Processing container line: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:21:57,857 - docker_manager - INFO - Processing container line: 789012	nginx:latest	Exited (0) 3 hours ago	webserver
+2025-05-16 21:21:57,866 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:57,867 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:57,867 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:21:57,870 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:57,870 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:57,871 - docker_manager - INFO - Removing container: 123456
+2025-05-16 21:21:57,871 - docker_manager - INFO - Successfully removed container: 123456
+2025-05-16 21:21:57,876 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:57,876 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:57,877 - docker_manager - INFO - Running container with command: docker run -d --name test-container -p 8080:80 python:3.9
+2025-05-16 21:21:57,878 - docker_manager - INFO - Successfully started container: 123456789abcdef
+2025-05-16 21:21:57,882 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:57,882 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:57,883 - docker_manager - INFO - Searching DockerHub for: python
+2025-05-16 21:21:57,883 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: NAME                          DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+2025-05-16 21:21:57,884 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: python                        Python is an interpreted, interactive, objec…   8112      [OK]       
+2025-05-16 21:21:57,884 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: python/someimage             A Python image with additional tools           123                  [OK]
+2025-05-16 21:21:57,884 - docker_manager - INFO - Found 0 results on DockerHub for 'python'
+2025-05-16 21:21:57,889 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:57,889 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:57,890 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:21:57,890 - docker_manager - INFO - Found 1 images matching 'python'
+2025-05-16 21:21:57,893 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:57,894 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:57,895 - docker_manager - INFO - Starting container: 123456
+2025-05-16 21:21:57,895 - docker_manager - INFO - Successfully started container: 123456
+2025-05-16 21:21:57,899 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:21:57,899 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:21:57,900 - docker_manager - INFO - Stopping container: 123456
+2025-05-16 21:21:57,901 - docker_manager - INFO - Successfully stopped container: 123456
+2025-05-16 21:23:04,107 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:04,108 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:04,245 - docker_manager - INFO - Building Docker image with command: docker build -t test-image:latest -f test_data\dockerfiles\build_test\Dockerfile D:\git hub projects\cloud\test_data\dockerfiles\build_test
+2025-05-16 21:23:04,245 - docker_manager - INFO - Successfully built Docker image: test-image:latest
+2025-05-16 21:23:04,250 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:04,251 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:04,252 - docker_manager - INFO - Created Dockerfile at test_data\dockerfiles\TestDockerfile
+2025-05-16 21:23:04,256 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:04,257 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:04,265 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\test_project
+2025-05-16 21:23:04,270 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:04,271 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:04,272 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\minimal_project
+2025-05-16 21:23:04,276 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:04,276 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:04,278 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:23:04,279 - docker_manager - INFO - Container output raw: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+789012	nginx:latest	Exited (0) 3 hours ago	webserver	
+2025-05-16 21:23:04,279 - docker_manager - INFO - Processing container line: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:23:04,280 - docker_manager - INFO - Processing container line: 789012	nginx:latest	Exited (0) 3 hours ago	webserver
+2025-05-16 21:23:04,287 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:04,288 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:04,289 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:23:04,293 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:04,293 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:04,294 - docker_manager - INFO - Removing container: 123456
+2025-05-16 21:23:04,295 - docker_manager - INFO - Successfully removed container: 123456
+2025-05-16 21:23:04,304 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:04,304 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:04,306 - docker_manager - INFO - Running container with command: docker run -d --name test-container -p 8080:80 python:3.9
+2025-05-16 21:23:04,306 - docker_manager - INFO - Successfully started container: 123456789abcdef
+2025-05-16 21:23:04,316 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:04,316 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:04,318 - docker_manager - INFO - Searching DockerHub for: python
+2025-05-16 21:23:04,318 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: NAME                          DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+2025-05-16 21:23:04,318 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: python                        Python is an interpreted, interactive, objec…   8112      [OK]       
+2025-05-16 21:23:04,319 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: python/someimage             A Python image with additional tools           123                  [OK]
+2025-05-16 21:23:04,319 - docker_manager - INFO - Found 0 results on DockerHub for 'python'
+2025-05-16 21:23:04,328 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:04,328 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:04,329 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:23:04,330 - docker_manager - INFO - Found 1 images matching 'python'
+2025-05-16 21:23:04,333 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:04,333 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:04,334 - docker_manager - INFO - Starting container: 123456
+2025-05-16 21:23:04,334 - docker_manager - INFO - Successfully started container: 123456
+2025-05-16 21:23:04,341 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:04,342 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:04,343 - docker_manager - INFO - Stopping container: 123456
+2025-05-16 21:23:04,343 - docker_manager - INFO - Successfully stopped container: 123456
+2025-05-16 21:23:31,990 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:31,991 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:31,993 - docker_manager - INFO - Building Docker image with command: docker build -t test-image:latest -f test_data\dockerfiles\build_test\Dockerfile D:\git hub projects\cloud\test_data\dockerfiles\build_test
+2025-05-16 21:23:31,994 - docker_manager - INFO - Successfully built Docker image: test-image:latest
+2025-05-16 21:23:31,999 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:31,999 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:32,001 - docker_manager - INFO - Created Dockerfile at test_data\dockerfiles\TestDockerfile
+2025-05-16 21:23:32,004 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:32,004 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:32,006 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\test_project
+2025-05-16 21:23:32,010 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:32,011 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:32,011 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\minimal_project
+2025-05-16 21:23:32,016 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:32,017 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:32,017 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:23:32,018 - docker_manager - INFO - Container output raw: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+789012	nginx:latest	Exited (0) 3 hours ago	webserver	
+2025-05-16 21:23:32,018 - docker_manager - INFO - Processing container line: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:23:32,018 - docker_manager - INFO - Processing container line: 789012	nginx:latest	Exited (0) 3 hours ago	webserver
+2025-05-16 21:23:32,022 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:32,022 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:32,023 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:23:32,025 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:32,026 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:32,026 - docker_manager - INFO - Removing container: 123456
+2025-05-16 21:23:32,027 - docker_manager - INFO - Successfully removed container: 123456
+2025-05-16 21:23:32,031 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:32,031 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:32,032 - docker_manager - INFO - Running container with command: docker run -d --name test-container -p 8080:80 python:3.9
+2025-05-16 21:23:32,032 - docker_manager - INFO - Successfully started container: 123456789abcdef
+2025-05-16 21:23:32,035 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:32,036 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:32,036 - docker_manager - INFO - Searching DockerHub for: python
+2025-05-16 21:23:32,037 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: NAME                          DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+2025-05-16 21:23:32,037 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: python                        Python is an interpreted, interactive, objec…   8112      [OK]       
+2025-05-16 21:23:32,037 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: python/someimage             A Python image with additional tools           123                  [OK]
+2025-05-16 21:23:32,037 - docker_manager - INFO - Found 0 results on DockerHub for 'python'
+2025-05-16 21:23:32,041 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:32,042 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:32,043 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:23:32,043 - docker_manager - INFO - Found 1 images matching 'python'
+2025-05-16 21:23:32,045 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:32,046 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:32,046 - docker_manager - INFO - Starting container: 123456
+2025-05-16 21:23:32,046 - docker_manager - INFO - Successfully started container: 123456
+2025-05-16 21:23:32,049 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:23:32,050 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:23:32,050 - docker_manager - INFO - Stopping container: 123456
+2025-05-16 21:23:32,050 - docker_manager - INFO - Successfully stopped container: 123456
+2025-05-16 21:24:23,114 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:24:23,115 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:24:23,116 - docker_manager - INFO - Building Docker image with command: docker build -t test-image:latest -f test_data\dockerfiles\build_test\Dockerfile D:\git hub projects\cloud\test_data\dockerfiles\build_test
+2025-05-16 21:24:23,117 - docker_manager - INFO - Successfully built Docker image: test-image:latest
+2025-05-16 21:24:23,129 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:24:23,129 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:24:23,130 - docker_manager - INFO - Created Dockerfile at test_data\dockerfiles\TestDockerfile
+2025-05-16 21:24:23,134 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:24:23,134 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:24:23,137 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\test_project
+2025-05-16 21:24:23,140 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:24:23,141 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:24:23,142 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\minimal_project
+2025-05-16 21:24:23,146 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:24:23,146 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:24:23,147 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:24:23,148 - docker_manager - INFO - Container output raw: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+789012	nginx:latest	Exited (0) 3 hours ago	webserver	
+2025-05-16 21:24:23,148 - docker_manager - INFO - Processing container line: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:24:23,149 - docker_manager - INFO - Processing container line: 789012	nginx:latest	Exited (0) 3 hours ago	webserver
+2025-05-16 21:24:23,154 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:24:23,154 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:24:23,155 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:24:23,158 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:24:23,158 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:24:23,159 - docker_manager - INFO - Removing container: 123456
+2025-05-16 21:24:23,160 - docker_manager - INFO - Successfully removed container: 123456
+2025-05-16 21:24:23,165 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:24:23,166 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:24:23,167 - docker_manager - INFO - Running container with command: docker run -d --name test-container -p 8080:80 python:3.9
+2025-05-16 21:24:23,167 - docker_manager - INFO - Successfully started container: 123456789abcdef
+2025-05-16 21:24:23,173 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:24:23,173 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:24:23,175 - docker_manager - INFO - Searching DockerHub for: python
+2025-05-16 21:24:23,176 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: NAME                          DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+2025-05-16 21:24:23,177 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: python                        Python is an interpreted, interactive, objec…   8112      [OK]       
+2025-05-16 21:24:23,177 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: python/someimage             A Python image with additional tools           123                  [OK]
+2025-05-16 21:24:23,178 - docker_manager - INFO - Found 0 results on DockerHub for 'python'
+2025-05-16 21:24:23,184 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:24:23,186 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:24:23,187 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:24:23,188 - docker_manager - INFO - Found 1 images matching 'python'
+2025-05-16 21:24:23,193 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:24:23,194 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:24:23,195 - docker_manager - INFO - Starting container: 123456
+2025-05-16 21:24:23,196 - docker_manager - INFO - Successfully started container: 123456
+2025-05-16 21:24:23,202 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:24:23,203 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:24:23,204 - docker_manager - INFO - Stopping container: 123456
+2025-05-16 21:24:23,205 - docker_manager - INFO - Successfully stopped container: 123456
+2025-05-16 21:25:12,433 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:25:12,434 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:25:12,436 - docker_manager - INFO - Building Docker image with command: docker build -t test-image:latest -f test_data\dockerfiles\build_test\Dockerfile D:\git hub projects\cloud\test_data\dockerfiles\build_test
+2025-05-16 21:25:12,436 - docker_manager - INFO - Successfully built Docker image: test-image:latest
+2025-05-16 21:25:12,441 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:25:12,442 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:25:12,443 - docker_manager - INFO - Created Dockerfile at test_data\dockerfiles\TestDockerfile
+2025-05-16 21:25:12,446 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:25:12,446 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:25:12,448 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\test_project
+2025-05-16 21:25:12,452 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:25:12,453 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:25:12,454 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\minimal_project
+2025-05-16 21:25:12,457 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:25:12,458 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:25:12,458 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:25:12,459 - docker_manager - INFO - Container output raw: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+789012	nginx:latest	Exited (0) 3 hours ago	webserver	
+2025-05-16 21:25:12,459 - docker_manager - INFO - Processing container line: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:25:12,459 - docker_manager - INFO - Processing container line: 789012	nginx:latest	Exited (0) 3 hours ago	webserver
+2025-05-16 21:25:12,463 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:25:12,464 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:25:12,464 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:25:12,467 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:25:12,468 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:25:12,469 - docker_manager - INFO - Removing container: 123456
+2025-05-16 21:25:12,469 - docker_manager - INFO - Successfully removed container: 123456
+2025-05-16 21:25:12,473 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:25:12,474 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:25:12,474 - docker_manager - INFO - Running container with command: docker run -d --name test-container -p 8080:80 python:3.9
+2025-05-16 21:25:12,475 - docker_manager - INFO - Successfully started container: 123456789abcdef
+2025-05-16 21:25:12,478 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:25:12,479 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:25:12,479 - docker_manager - INFO - Searching DockerHub for: python
+2025-05-16 21:25:12,479 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: NAME                          DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+2025-05-16 21:25:12,480 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: python                        Python is an interpreted, interactive, objec…   8112      [OK]       
+2025-05-16 21:25:12,480 - docker_manager - ERROR - Failed to parse Docker Hub search result: Expecting value: line 1 column 1 (char 0) - Line: python/someimage             A Python image with additional tools           123                  [OK]
+2025-05-16 21:25:12,480 - docker_manager - INFO - Found 0 results on DockerHub for 'python'
+2025-05-16 21:25:12,484 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:25:12,485 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:25:12,485 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:25:12,485 - docker_manager - INFO - Found 1 images matching 'python'
+2025-05-16 21:25:12,488 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:25:12,489 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:25:12,490 - docker_manager - INFO - Starting container: 123456
+2025-05-16 21:25:12,490 - docker_manager - INFO - Successfully started container: 123456
+2025-05-16 21:25:12,493 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:25:12,494 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:25:12,495 - docker_manager - INFO - Stopping container: 123456
+2025-05-16 21:25:12,495 - docker_manager - INFO - Successfully stopped container: 123456
+2025-05-16 21:25:43,100 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-16 21:25:43,177 - docker_manager - INFO - Docker detected: Docker version 28.1.1, build 4eba377
+2025-05-16 21:25:43,936 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:25:44,333 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:25:44,428 - docker_manager - INFO - Container output raw: 5a537289c816	mongo:latest	Exited (0) 10 minutes ago	vibrant_vaughan	
+c149e5b71f10	test1:latest	Exited (0) 15 minutes ago	goofy_ishizaka	
+
+2025-05-16 21:25:44,428 - docker_manager - INFO - Processing container line: 5a537289c816	mongo:latest	Exited (0) 10 minutes ago	vibrant_vaughan	
+2025-05-16 21:25:44,428 - docker_manager - INFO - Processing container line: c149e5b71f10	test1:latest	Exited (0) 15 minutes ago	goofy_ishizaka
+2025-05-16 21:26:08,804 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-16 21:26:08,879 - docker_manager - INFO - Docker detected: Docker version 28.1.1, build 4eba377
+2025-05-16 21:26:09,358 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:26:09,747 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:26:09,819 - docker_manager - INFO - Container output raw: 5a537289c816	mongo:latest	Exited (0) 10 minutes ago	vibrant_vaughan	
+c149e5b71f10	test1:latest	Exited (0) 15 minutes ago	goofy_ishizaka	
+
+2025-05-16 21:26:09,820 - docker_manager - INFO - Processing container line: 5a537289c816	mongo:latest	Exited (0) 10 minutes ago	vibrant_vaughan	
+2025-05-16 21:26:09,820 - docker_manager - INFO - Processing container line: c149e5b71f10	test1:latest	Exited (0) 15 minutes ago	goofy_ishizaka
+2025-05-16 21:27:13,262 - docker_manager - INFO - Ensured directories: data/dockerfiles, data/docker
+2025-05-16 21:27:13,336 - docker_manager - INFO - Docker detected: Docker version 28.1.1, build 4eba377
+2025-05-16 21:27:13,757 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:27:14,148 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:27:14,224 - docker_manager - INFO - Container output raw: 5a537289c816	mongo:latest	Exited (0) 10 minutes ago	vibrant_vaughan	
+c149e5b71f10	test1:latest	Exited (0) 15 minutes ago	goofy_ishizaka	
+
+2025-05-16 21:27:14,224 - docker_manager - INFO - Processing container line: 5a537289c816	mongo:latest	Exited (0) 10 minutes ago	vibrant_vaughan	
+2025-05-16 21:27:14,225 - docker_manager - INFO - Processing container line: c149e5b71f10	test1:latest	Exited (0) 15 minutes ago	goofy_ishizaka
+2025-05-16 21:29:32,727 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:29:32,728 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:29:32,730 - docker_manager - INFO - Building Docker image with command: docker build -t test-image:latest -f test_data\dockerfiles\build_test\Dockerfile D:\git hub projects\cloud\test_data\dockerfiles\build_test
+2025-05-16 21:29:32,731 - docker_manager - INFO - Successfully built Docker image: test-image:latest
+2025-05-16 21:29:32,734 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:29:32,735 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:29:32,736 - docker_manager - INFO - Created Dockerfile at test_data\dockerfiles\TestDockerfile
+2025-05-16 21:29:32,739 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:29:32,739 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:29:32,741 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\test_project
+2025-05-16 21:29:32,745 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:29:32,746 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:29:32,747 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\minimal_project
+2025-05-16 21:29:32,750 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:29:32,751 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:29:32,751 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:29:32,752 - docker_manager - INFO - Container output raw: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:29:32,752 - docker_manager - INFO - Processing container line: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:29:32,755 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:29:32,755 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:29:32,756 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:29:32,762 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:29:32,762 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:29:32,764 - docker_manager - INFO - Removing container: 123456
+2025-05-16 21:29:32,764 - docker_manager - INFO - Successfully removed container: 123456
+2025-05-16 21:29:32,863 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:29:32,864 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:29:32,865 - docker_manager - INFO - Running container with command: docker run -d --name test-container -p 8080:80 python:3.9
+2025-05-16 21:29:32,865 - docker_manager - INFO - Successfully started container: 123456789abcdef
+2025-05-16 21:29:32,867 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:29:32,868 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:29:32,869 - docker_manager - INFO - Searching DockerHub for: python
+2025-05-16 21:29:32,869 - docker_manager - INFO - Found 2 results on DockerHub for 'python'
+2025-05-16 21:29:32,872 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:29:32,872 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:29:32,873 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:29:32,873 - docker_manager - INFO - Found 1 images matching 'python'
+2025-05-16 21:29:32,876 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:29:32,877 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:29:32,877 - docker_manager - INFO - Starting container: 123456
+2025-05-16 21:29:32,878 - docker_manager - INFO - Successfully started container: 123456
+2025-05-16 21:29:32,881 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:29:32,881 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:29:32,882 - docker_manager - INFO - Stopping container: 123456
+2025-05-16 21:29:32,882 - docker_manager - INFO - Successfully stopped container: 123456
+2025-05-16 21:30:17,348 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:30:17,349 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:30:17,351 - docker_manager - INFO - Building Docker image with command: docker build -t test-image:latest -f test_data\dockerfiles\build_test\Dockerfile D:\git hub projects\cloud\test_data\dockerfiles\build_test
+2025-05-16 21:30:17,352 - docker_manager - INFO - Successfully built Docker image: test-image:latest
+2025-05-16 21:30:17,356 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:30:17,356 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:30:17,358 - docker_manager - INFO - Created Dockerfile at test_data\dockerfiles\TestDockerfile
+2025-05-16 21:30:17,361 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:30:17,362 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:30:17,364 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\test_project
+2025-05-16 21:30:17,368 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:30:17,368 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:30:17,370 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\minimal_project
+2025-05-16 21:30:17,374 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:30:17,374 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:30:17,375 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:30:17,375 - docker_manager - INFO - Container output raw: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:30:17,376 - docker_manager - INFO - Processing container line: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:30:17,476 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:30:17,476 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:30:17,477 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:30:17,480 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:30:17,481 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:30:17,482 - docker_manager - INFO - Removing container: 123456
+2025-05-16 21:30:17,483 - docker_manager - INFO - Successfully removed container: 123456
+2025-05-16 21:30:17,485 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:30:17,486 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:30:17,487 - docker_manager - INFO - Running container with command: docker run -d --name test-container -p 8080:80 python:3.9
+2025-05-16 21:30:17,488 - docker_manager - INFO - Successfully started container: 123456789abcdef
+2025-05-16 21:30:17,492 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:30:17,492 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:30:17,494 - docker_manager - INFO - Searching DockerHub for: python
+2025-05-16 21:30:17,494 - docker_manager - INFO - Found 2 results on DockerHub for 'python'
+2025-05-16 21:30:17,497 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:30:17,498 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:30:17,499 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:30:17,499 - docker_manager - INFO - Found 1 images matching 'python'
+2025-05-16 21:30:17,503 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:30:17,503 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:30:17,504 - docker_manager - INFO - Starting container: 123456
+2025-05-16 21:30:17,504 - docker_manager - INFO - Successfully started container: 123456
+2025-05-16 21:30:17,506 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:30:17,507 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:30:17,508 - docker_manager - INFO - Stopping container: 123456
+2025-05-16 21:30:17,508 - docker_manager - INFO - Successfully stopped container: 123456
+2025-05-16 21:31:51,774 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:31:51,774 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:31:51,776 - docker_manager - INFO - Building Docker image with command: docker build -t test-image:latest -f test_data\dockerfiles\build_test\Dockerfile D:\git hub projects\cloud\test_data\dockerfiles\build_test
+2025-05-16 21:31:51,776 - docker_manager - INFO - Successfully built Docker image: test-image:latest
+2025-05-16 21:31:51,779 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:31:51,780 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:31:51,781 - docker_manager - INFO - Created Dockerfile at test_data\dockerfiles\TestDockerfile
+2025-05-16 21:31:51,784 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:31:51,784 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:31:51,786 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\test_project
+2025-05-16 21:31:51,790 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:31:51,790 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:31:51,791 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\minimal_project
+2025-05-16 21:31:51,794 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:31:51,795 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:31:51,796 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:31:51,796 - docker_manager - INFO - Container output raw: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:31:51,796 - docker_manager - INFO - Processing container line: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:31:51,799 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:31:51,800 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:31:51,800 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:31:51,804 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:31:51,804 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:31:51,805 - docker_manager - INFO - Removing container: 123456
+2025-05-16 21:31:51,805 - docker_manager - INFO - Successfully removed container: 123456
+2025-05-16 21:31:51,808 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:31:51,808 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:31:51,809 - docker_manager - INFO - Running container with command: docker run -d --name test-container -p 8080:80 python:3.9
+2025-05-16 21:31:51,810 - docker_manager - INFO - Successfully started container: 123456789abcdef
+2025-05-16 21:31:51,812 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:31:51,812 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:31:51,813 - docker_manager - INFO - Searching DockerHub for: python
+2025-05-16 21:31:51,813 - docker_manager - INFO - Found 2 results on DockerHub for 'python'
+2025-05-16 21:31:51,816 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:31:51,816 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:31:51,817 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:31:51,817 - docker_manager - INFO - Found 1 images matching 'python'
+2025-05-16 21:31:51,820 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:31:51,821 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:31:51,821 - docker_manager - INFO - Starting container: 123456
+2025-05-16 21:31:51,821 - docker_manager - INFO - Successfully started container: 123456
+2025-05-16 21:31:51,824 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:31:51,825 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:31:51,826 - docker_manager - INFO - Stopping container: 123456
+2025-05-16 21:31:51,826 - docker_manager - INFO - Successfully stopped container: 123456
+2025-05-16 21:33:22,130 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:33:22,131 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:33:22,133 - docker_manager - INFO - Building Docker image with command: docker build -t test-image:latest -f test_data\dockerfiles\build_test\Dockerfile D:\git hub projects\cloud\test_data\dockerfiles\build_test
+2025-05-16 21:33:22,134 - docker_manager - INFO - Successfully built Docker image: test-image:latest
+2025-05-16 21:33:22,138 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:33:22,138 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:33:22,140 - docker_manager - INFO - Created Dockerfile at test_data\dockerfiles\TestDockerfile
+2025-05-16 21:33:22,142 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:33:22,143 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:33:22,145 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\test_project
+2025-05-16 21:33:22,149 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:33:22,149 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:33:22,151 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\minimal_project
+2025-05-16 21:33:22,154 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:33:22,154 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:33:22,155 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:33:22,155 - docker_manager - INFO - Container output raw: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:33:22,156 - docker_manager - INFO - Processing container line: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:33:22,161 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:33:22,162 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:33:22,162 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:33:22,165 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:33:22,166 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:33:22,166 - docker_manager - INFO - Removing container: 123456
+2025-05-16 21:33:22,167 - docker_manager - INFO - Successfully removed container: 123456
+2025-05-16 21:33:22,169 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:33:22,169 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:33:22,170 - docker_manager - INFO - Running container with command: docker run -d --name test-container -p 8080:80 python:3.9
+2025-05-16 21:33:22,170 - docker_manager - INFO - Successfully started container: 123456789abcdef
+2025-05-16 21:33:22,174 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:33:22,175 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:33:22,175 - docker_manager - INFO - Searching DockerHub for: python
+2025-05-16 21:33:22,176 - docker_manager - INFO - Found 2 results on DockerHub for 'python'
+2025-05-16 21:33:22,178 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:33:22,179 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:33:22,180 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:33:22,180 - docker_manager - INFO - Found 1 images matching 'python'
+2025-05-16 21:33:22,182 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:33:22,183 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:33:22,183 - docker_manager - INFO - Starting container: 123456
+2025-05-16 21:33:22,184 - docker_manager - INFO - Successfully started container: 123456
+2025-05-16 21:33:22,186 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:33:22,187 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:33:22,188 - docker_manager - INFO - Stopping container: 123456
+2025-05-16 21:33:22,188 - docker_manager - INFO - Successfully stopped container: 123456
+2025-05-16 21:35:06,036 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:35:06,037 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:35:06,038 - docker_manager - INFO - Building Docker image with command: docker build -t test-image:latest -f test_data\dockerfiles\build_test\Dockerfile D:\git hub projects\cloud\test_data\dockerfiles\build_test
+2025-05-16 21:35:06,039 - docker_manager - INFO - Successfully built Docker image: test-image:latest
+2025-05-16 21:35:06,045 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:35:06,046 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:35:06,047 - docker_manager - INFO - Created Dockerfile at test_data\dockerfiles\TestDockerfile
+2025-05-16 21:35:06,051 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:35:06,052 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:35:06,053 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\test_project
+2025-05-16 21:35:06,057 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:35:06,058 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:35:06,059 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\minimal_project
+2025-05-16 21:35:06,062 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:35:06,062 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:35:06,063 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:35:06,064 - docker_manager - INFO - Container output raw: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:35:06,064 - docker_manager - INFO - Processing container line: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:35:06,066 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:35:06,067 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:35:06,068 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:35:06,071 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:35:06,072 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:35:06,072 - docker_manager - INFO - Removing container: 123456
+2025-05-16 21:35:06,073 - docker_manager - INFO - Successfully removed container: 123456
+2025-05-16 21:35:06,076 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:35:06,076 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:35:06,077 - docker_manager - INFO - Running container with command: docker run -d --name test-container -p 8080:80 python:3.9
+2025-05-16 21:35:06,078 - docker_manager - INFO - Successfully started container: 123456789abcdef
+2025-05-16 21:35:06,081 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:35:06,081 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:35:06,082 - docker_manager - INFO - Searching DockerHub for: python
+2025-05-16 21:35:06,083 - docker_manager - INFO - Found 2 results on DockerHub for 'python'
+2025-05-16 21:35:06,086 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:35:06,086 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:35:06,087 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:35:06,088 - docker_manager - INFO - Found 1 images matching 'python'
+2025-05-16 21:35:06,094 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:35:06,095 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:35:06,095 - docker_manager - INFO - Starting container: 123456
+2025-05-16 21:35:06,096 - docker_manager - INFO - Successfully started container: 123456
+2025-05-16 21:35:06,099 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:35:06,100 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:35:06,101 - docker_manager - INFO - Stopping container: 123456
+2025-05-16 21:35:06,101 - docker_manager - INFO - Successfully stopped container: 123456
+2025-05-16 21:36:08,728 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:36:08,729 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:36:08,731 - docker_manager - INFO - Building Docker image with command: docker build -t test-image:latest -f test_data\dockerfiles\build_test\Dockerfile D:\git hub projects\cloud\test_data\dockerfiles\build_test
+2025-05-16 21:36:08,731 - docker_manager - INFO - Successfully built Docker image: test-image:latest
+2025-05-16 21:36:08,735 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:36:08,736 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:36:08,737 - docker_manager - INFO - Created Dockerfile at test_data\dockerfiles\TestDockerfile
+2025-05-16 21:36:08,741 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:36:08,741 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:36:08,743 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\test_project
+2025-05-16 21:36:08,747 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:36:08,747 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:36:08,748 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\minimal_project
+2025-05-16 21:36:08,751 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:36:08,751 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:36:08,752 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:36:08,753 - docker_manager - INFO - Container output raw: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:36:08,753 - docker_manager - INFO - Processing container line: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:36:08,756 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:36:08,756 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:36:08,757 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:36:08,760 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:36:08,760 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:36:08,761 - docker_manager - INFO - Removing container: 123456
+2025-05-16 21:36:08,761 - docker_manager - INFO - Successfully removed container: 123456
+2025-05-16 21:36:08,764 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:36:08,765 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:36:08,766 - docker_manager - INFO - Running container with command: docker run -d --name test-container -p 8080:80 python:3.9
+2025-05-16 21:36:08,768 - docker_manager - INFO - Successfully started container: 123456789abcdef
+2025-05-16 21:36:08,770 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:36:08,771 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:36:08,771 - docker_manager - INFO - Searching DockerHub for: python
+2025-05-16 21:36:08,772 - docker_manager - INFO - Found 2 results on DockerHub for 'python'
+2025-05-16 21:36:08,774 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:36:08,775 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:36:08,775 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:36:08,776 - docker_manager - INFO - Found 1 images matching 'python'
+2025-05-16 21:36:08,778 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:36:08,778 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:36:08,779 - docker_manager - INFO - Starting container: 123456
+2025-05-16 21:36:08,779 - docker_manager - INFO - Successfully started container: 123456
+2025-05-16 21:36:08,781 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:36:08,782 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:36:08,782 - docker_manager - INFO - Stopping container: 123456
+2025-05-16 21:36:08,783 - docker_manager - INFO - Successfully stopped container: 123456
+2025-05-16 21:37:52,632 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:37:52,633 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:37:52,635 - docker_manager - INFO - Building Docker image with command: docker build -t test-image:latest -f test_data\dockerfiles\build_test\Dockerfile D:\git hub projects\cloud\test_data\dockerfiles\build_test
+2025-05-16 21:37:52,635 - docker_manager - INFO - Successfully built Docker image: test-image:latest
+2025-05-16 21:37:52,639 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:37:52,640 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:37:52,641 - docker_manager - INFO - Created Dockerfile at test_data\dockerfiles\TestDockerfile
+2025-05-16 21:37:52,643 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:37:52,644 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:37:52,645 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\test_project
+2025-05-16 21:37:52,649 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:37:52,649 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:37:52,651 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\minimal_project
+2025-05-16 21:37:52,653 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:37:52,654 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:37:52,655 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:37:52,655 - docker_manager - INFO - Container output raw: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:37:52,655 - docker_manager - INFO - Processing container line: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:37:52,658 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:37:52,659 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:37:52,660 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:37:52,662 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:37:52,662 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:37:52,663 - docker_manager - INFO - Removing container: 123456
+2025-05-16 21:37:52,663 - docker_manager - INFO - Successfully removed container: 123456
+2025-05-16 21:37:52,666 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:37:52,666 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:37:52,667 - docker_manager - INFO - Running container with command: docker run -d --name test-container -p 8080:80 python:3.9
+2025-05-16 21:37:52,667 - docker_manager - INFO - Successfully started container: 123456789abcdef
+2025-05-16 21:37:52,670 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:37:52,670 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:37:52,671 - docker_manager - INFO - Searching DockerHub for: python
+2025-05-16 21:37:52,671 - docker_manager - INFO - Found 2 results on DockerHub for 'python'
+2025-05-16 21:37:52,674 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:37:52,674 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:37:52,675 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:37:52,675 - docker_manager - INFO - Found 1 images matching 'python'
+2025-05-16 21:37:52,678 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:37:52,679 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:37:52,679 - docker_manager - INFO - Starting container: 123456
+2025-05-16 21:37:52,680 - docker_manager - INFO - Successfully started container: 123456
+2025-05-16 21:37:52,682 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:37:52,682 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:37:52,683 - docker_manager - INFO - Stopping container: 123456
+2025-05-16 21:37:52,683 - docker_manager - INFO - Successfully stopped container: 123456
+2025-05-16 21:40:16,492 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:40:16,493 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:40:16,495 - docker_manager - INFO - Building Docker image with command: docker build -t test-image:latest -f test_data\dockerfiles\build_test\Dockerfile D:\git hub projects\cloud\test_data\dockerfiles\build_test
+2025-05-16 21:40:16,495 - docker_manager - INFO - Successfully built Docker image: test-image:latest
+2025-05-16 21:40:16,500 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:40:16,501 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:40:16,502 - docker_manager - INFO - Created Dockerfile at test_data\dockerfiles\TestDockerfile
+2025-05-16 21:40:16,506 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:40:16,507 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:40:16,509 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\test_project
+2025-05-16 21:40:16,513 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:40:16,514 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:40:16,516 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\minimal_project
+2025-05-16 21:40:16,520 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:40:16,520 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:40:16,522 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:40:16,523 - docker_manager - INFO - Container output raw: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:40:16,523 - docker_manager - INFO - Processing container line: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:40:16,527 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:40:16,528 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:40:16,529 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:40:16,532 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:40:16,533 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:40:16,534 - docker_manager - INFO - Removing container: 123456
+2025-05-16 21:40:16,535 - docker_manager - INFO - Successfully removed container: 123456
+2025-05-16 21:40:16,540 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:40:16,541 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:40:16,542 - docker_manager - INFO - Running container with command: docker run -d --name test-container -p 8080:80 python:3.9
+2025-05-16 21:40:16,542 - docker_manager - INFO - Successfully started container: 123456789abcdef
+2025-05-16 21:40:16,546 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:40:16,547 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:40:16,548 - docker_manager - INFO - Searching DockerHub for: python
+2025-05-16 21:40:16,548 - docker_manager - INFO - Found 2 results on DockerHub for 'python'
+2025-05-16 21:40:16,552 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:40:16,553 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:40:16,554 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:40:16,555 - docker_manager - INFO - Found 1 images matching 'python'
+2025-05-16 21:40:16,559 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:40:16,559 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:40:16,560 - docker_manager - INFO - Starting container: 123456
+2025-05-16 21:40:16,561 - docker_manager - INFO - Successfully started container: 123456
+2025-05-16 21:40:16,566 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:40:16,567 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:40:16,568 - docker_manager - INFO - Stopping container: 123456
+2025-05-16 21:40:16,568 - docker_manager - INFO - Successfully stopped container: 123456
+2025-05-16 21:41:55,688 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:41:55,689 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:41:55,691 - docker_manager - INFO - Building Docker image with command: docker build -t test-image:latest -f test_data\dockerfiles\build_test\Dockerfile D:\git hub projects\cloud\test_data\dockerfiles\build_test
+2025-05-16 21:41:55,692 - docker_manager - INFO - Successfully built Docker image: test-image:latest
+2025-05-16 21:41:55,695 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:41:55,696 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:41:55,697 - docker_manager - INFO - Created Dockerfile at test_data\dockerfiles\TestDockerfile
+2025-05-16 21:41:55,700 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:41:55,700 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:41:55,704 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\test_project
+2025-05-16 21:41:55,709 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:41:55,709 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:41:55,711 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\minimal_project
+2025-05-16 21:41:55,714 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:41:55,714 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:41:55,715 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:41:55,716 - docker_manager - INFO - Container output raw: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:41:55,716 - docker_manager - INFO - Processing container line: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:41:55,720 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:41:55,721 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:41:55,721 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:41:55,724 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:41:55,725 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:41:55,725 - docker_manager - INFO - Removing container: 123456
+2025-05-16 21:41:55,725 - docker_manager - INFO - Successfully removed container: 123456
+2025-05-16 21:41:55,728 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:41:55,728 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:41:55,729 - docker_manager - INFO - Running container with command: docker run -d --name test-container -p 8080:80 python:3.9
+2025-05-16 21:41:55,729 - docker_manager - INFO - Successfully started container: 123456789abcdef
+2025-05-16 21:41:55,733 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:41:55,733 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:41:55,734 - docker_manager - INFO - Searching DockerHub for: python
+2025-05-16 21:41:55,734 - docker_manager - INFO - Found 2 results on DockerHub for 'python'
+2025-05-16 21:41:55,737 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:41:55,738 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:41:55,739 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:41:55,739 - docker_manager - INFO - Found 1 images matching 'python'
+2025-05-16 21:41:55,741 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:41:55,742 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:41:55,742 - docker_manager - INFO - Starting container: 123456
+2025-05-16 21:41:55,742 - docker_manager - INFO - Successfully started container: 123456
+2025-05-16 21:41:55,745 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:41:55,746 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:41:55,746 - docker_manager - INFO - Stopping container: 123456
+2025-05-16 21:41:55,747 - docker_manager - INFO - Successfully stopped container: 123456
+2025-05-16 21:42:53,978 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:42:53,979 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:42:53,981 - docker_manager - INFO - Building Docker image with command: docker build -t test-image:latest -f test_data\dockerfiles\build_test\Dockerfile D:\git hub projects\cloud\test_data\dockerfiles\build_test
+2025-05-16 21:42:53,982 - docker_manager - INFO - Successfully built Docker image: test-image:latest
+2025-05-16 21:42:53,987 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:42:53,987 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:42:53,989 - docker_manager - INFO - Created Dockerfile at test_data\dockerfiles\TestDockerfile
+2025-05-16 21:42:53,993 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:42:53,993 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:42:53,995 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\test_project
+2025-05-16 21:42:54,000 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:42:54,000 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:42:54,002 - docker_manager - INFO - Created Docker project at test_data\dockerfiles\minimal_project
+2025-05-16 21:42:54,007 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:42:54,008 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:42:54,009 - docker_manager - INFO - Listing all Docker containers with command: docker ps -a --format {{.ID}}	{{.Image}}	{{.Status}}	{{.Names}}	{{.Ports}}
+2025-05-16 21:42:54,009 - docker_manager - INFO - Container output raw: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:42:54,010 - docker_manager - INFO - Processing container line: 123456	python:3.9	Up 2 hours	test-container	80/tcp, 443/tcp
+2025-05-16 21:42:54,012 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:42:54,013 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:42:54,013 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:42:54,016 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:42:54,016 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:42:54,017 - docker_manager - INFO - Removing container: 123456
+2025-05-16 21:42:54,018 - docker_manager - INFO - Successfully removed container: 123456
+2025-05-16 21:42:54,020 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:42:54,021 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:42:54,022 - docker_manager - INFO - Running container with command: docker run -d --name test-container -p 8080:80 python:3.9
+2025-05-16 21:42:54,023 - docker_manager - INFO - Successfully started container: 123456789abcdef
+2025-05-16 21:42:54,027 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:42:54,027 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:42:54,028 - docker_manager - INFO - Searching DockerHub for: python
+2025-05-16 21:42:54,028 - docker_manager - INFO - Found 2 results on DockerHub for 'python'
+2025-05-16 21:42:54,032 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:42:54,033 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:42:54,033 - docker_manager - INFO - Listing Docker images
+2025-05-16 21:42:54,033 - docker_manager - INFO - Found 1 images matching 'python'
+2025-05-16 21:42:54,036 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:42:54,036 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:42:54,037 - docker_manager - INFO - Starting container: 123456
+2025-05-16 21:42:54,037 - docker_manager - INFO - Successfully started container: 123456
+2025-05-16 21:42:54,040 - docker_manager - INFO - Ensured directories: test_data\dockerfiles, test_data\docker
+2025-05-16 21:42:54,040 - docker_manager - ERROR - Docker not installed or not accessible
+2025-05-16 21:42:54,041 - docker_manager - INFO - Stopping container: 123456
+2025-05-16 21:42:54,041 - docker_manager - INFO - Successfully stopped container: 123456

@@ -50,3 +50,269 @@
 2025-05-16 19:27:09,844 - vm_manager - INFO - Starting VM www with command: qemu-system-x86_64 -m 1024 -smp 1 -drive file=data/disks\ww.qcow2,format=qcow2 -display gtk
 2025-05-16 19:49:20,432 - vm_manager - WARNING - VM config for www no longer exists at data/vms\www.json. Removing from registry.
 2025-05-16 19:49:20,450 - vm_manager - INFO - Added existing VM firstvm to registry
+2025-05-16 21:25:43,098 - vm_manager - WARNING - VM config for firstvm no longer exists at data/vms\firstvm.json. Removing from registry.
+2025-05-16 21:25:43,098 - vm_manager - INFO - Added existing VM www to registry
+2025-05-16 21:29:30,593 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:29:30,594 - vm_manager - ERROR - VM test_vm already exists
+2025-05-16 21:29:30,602 - vm_manager - ERROR - CPU count must be positive: -1
+2025-05-16 21:29:30,602 - vm_manager - ERROR - CPU count too high: 32
+2025-05-16 21:29:30,610 - vm_manager - ERROR - Memory must be positive: -1024
+2025-05-16 21:29:30,610 - vm_manager - ERROR - Memory too low: 100
+2025-05-16 21:29:30,611 - vm_manager - ERROR - Memory value too high: 1000000
+2025-05-16 21:29:30,618 - vm_manager - ERROR - VM name cannot be empty
+2025-05-16 21:29:30,618 - vm_manager - ERROR - VM name contains invalid characters: invalid/name
+2025-05-16 21:29:30,628 - vm_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:29:30,639 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:29:30,651 - vm_manager - INFO - Successfully created VM test_vm_with_iso
+2025-05-16 21:29:30,662 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:29:30,671 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:29:30,672 - vm_manager - INFO - Successfully deleted VM test_vm
+2025-05-16 21:29:30,694 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:29:30,703 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:29:30,713 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:29:30,714 - vm_manager - INFO - Using disk test_data\disks\test_disk.qcow2 with format qcow2
+2025-05-16 21:29:30,714 - vm_manager - INFO - Starting VM test_vm with command: qemu-system-x86_64 -m 1024 -smp 1 -drive file=test_data\disks\test_disk.qcow2,format=qcow2 -display gtk
+2025-05-16 21:29:32,723 - vm_manager - WARNING - VM config for nonexistent_vm no longer exists at test_data\vms\nonexistent_vm.json. Removing from registry.
+2025-05-16 21:29:32,724 - vm_manager - INFO - Added existing VM unlisted_vm to registry
+2025-05-16 21:29:32,910 - vm_manager - ERROR - Disk test_disk not found
+2025-05-16 21:29:32,910 - vm_manager - ERROR - VM test_vm not found
+2025-05-16 21:29:32,920 - vm_manager - ERROR - Disk test_disk not found
+2025-05-16 21:29:32,935 - vm_manager - ERROR - Disk test_disk not found
+2025-05-16 21:30:15,220 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:30:15,220 - vm_manager - ERROR - VM test_vm already exists
+2025-05-16 21:30:15,228 - vm_manager - ERROR - CPU count must be positive: -1
+2025-05-16 21:30:15,228 - vm_manager - ERROR - CPU count too high: 32
+2025-05-16 21:30:15,235 - vm_manager - ERROR - Memory must be positive: -1024
+2025-05-16 21:30:15,235 - vm_manager - ERROR - Memory too low: 100
+2025-05-16 21:30:15,236 - vm_manager - ERROR - Memory value too high: 1000000
+2025-05-16 21:30:15,243 - vm_manager - ERROR - VM name cannot be empty
+2025-05-16 21:30:15,243 - vm_manager - ERROR - VM name contains invalid characters: invalid/name
+2025-05-16 21:30:15,252 - vm_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:30:15,265 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:30:15,276 - vm_manager - INFO - Successfully created VM test_vm_with_iso
+2025-05-16 21:30:15,284 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:30:15,296 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:30:15,297 - vm_manager - INFO - Successfully deleted VM test_vm
+2025-05-16 21:30:15,315 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:30:15,323 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:30:15,334 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:30:15,335 - vm_manager - INFO - Using disk test_data\disks\test_disk.qcow2 with format qcow2
+2025-05-16 21:30:15,335 - vm_manager - INFO - Starting VM test_vm with command: qemu-system-x86_64 -m 1024 -smp 1 -drive file=test_data\disks\test_disk.qcow2,format=qcow2 -display gtk
+2025-05-16 21:30:17,344 - vm_manager - WARNING - VM config for nonexistent_vm no longer exists at test_data\vms\nonexistent_vm.json. Removing from registry.
+2025-05-16 21:30:17,344 - vm_manager - INFO - Added existing VM unlisted_vm to registry
+2025-05-16 21:30:17,522 - vm_manager - ERROR - Disk test_disk not found
+2025-05-16 21:30:17,523 - vm_manager - ERROR - VM test_vm not found
+2025-05-16 21:30:17,533 - vm_manager - ERROR - Disk test_disk not found
+2025-05-16 21:30:17,550 - vm_manager - ERROR - Disk test_disk not found
+2025-05-16 21:31:49,654 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:31:49,654 - vm_manager - ERROR - VM test_vm already exists
+2025-05-16 21:31:49,663 - vm_manager - ERROR - CPU count must be positive: -1
+2025-05-16 21:31:49,664 - vm_manager - ERROR - CPU count too high: 32
+2025-05-16 21:31:49,672 - vm_manager - ERROR - Memory must be positive: -1024
+2025-05-16 21:31:49,672 - vm_manager - ERROR - Memory too low: 100
+2025-05-16 21:31:49,672 - vm_manager - ERROR - Memory value too high: 1000000
+2025-05-16 21:31:49,681 - vm_manager - ERROR - VM name cannot be empty
+2025-05-16 21:31:49,681 - vm_manager - ERROR - VM name contains invalid characters: invalid/name
+2025-05-16 21:31:49,689 - vm_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:31:49,698 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:31:49,709 - vm_manager - INFO - Successfully created VM test_vm_with_iso
+2025-05-16 21:31:49,716 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:31:49,728 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:31:49,729 - vm_manager - INFO - Successfully deleted VM test_vm
+2025-05-16 21:31:49,745 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:31:49,752 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:31:49,761 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:31:49,762 - vm_manager - INFO - Using disk test_data\disks\test_disk.qcow2 with format qcow2
+2025-05-16 21:31:49,763 - vm_manager - INFO - Starting VM test_vm with command: qemu-system-x86_64 -m 1024 -smp 1 -drive file=test_data\disks\test_disk.qcow2,format=qcow2 -display gtk
+2025-05-16 21:31:51,770 - vm_manager - WARNING - VM config for nonexistent_vm no longer exists at test_data\vms\nonexistent_vm.json. Removing from registry.
+2025-05-16 21:31:51,771 - vm_manager - INFO - Added existing VM unlisted_vm to registry
+2025-05-16 21:33:19,982 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:33:19,982 - vm_manager - ERROR - VM test_vm already exists
+2025-05-16 21:33:19,994 - vm_manager - ERROR - CPU count must be positive: -1
+2025-05-16 21:33:19,994 - vm_manager - ERROR - CPU count too high: 32
+2025-05-16 21:33:20,007 - vm_manager - ERROR - Memory must be positive: -1024
+2025-05-16 21:33:20,008 - vm_manager - ERROR - Memory too low: 100
+2025-05-16 21:33:20,008 - vm_manager - ERROR - Memory value too high: 1000000
+2025-05-16 21:33:20,018 - vm_manager - ERROR - VM name cannot be empty
+2025-05-16 21:33:20,018 - vm_manager - ERROR - VM name contains invalid characters: invalid/name
+2025-05-16 21:33:20,029 - vm_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:33:20,039 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:33:20,052 - vm_manager - INFO - Successfully created VM test_vm_with_iso
+2025-05-16 21:33:20,064 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:33:20,075 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:33:20,076 - vm_manager - INFO - Successfully deleted VM test_vm
+2025-05-16 21:33:20,095 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:33:20,104 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:33:20,115 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:33:20,116 - vm_manager - INFO - Using disk test_data\disks\test_disk.qcow2 with format qcow2
+2025-05-16 21:33:20,116 - vm_manager - INFO - Starting VM test_vm with command: qemu-system-x86_64 -m 1024 -smp 1 -drive file=test_data\disks\test_disk.qcow2,format=qcow2 -display gtk
+2025-05-16 21:33:22,126 - vm_manager - WARNING - VM config for nonexistent_vm no longer exists at test_data\vms\nonexistent_vm.json. Removing from registry.
+2025-05-16 21:33:22,126 - vm_manager - INFO - Added existing VM unlisted_vm to registry
+2025-05-16 21:35:03,912 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:35:03,912 - vm_manager - ERROR - VM test_vm already exists
+2025-05-16 21:35:03,919 - vm_manager - ERROR - CPU count must be positive: -1
+2025-05-16 21:35:03,919 - vm_manager - ERROR - CPU count too high: 32
+2025-05-16 21:35:03,926 - vm_manager - ERROR - Memory must be positive: -1024
+2025-05-16 21:35:03,926 - vm_manager - ERROR - Memory too low: 100
+2025-05-16 21:35:03,927 - vm_manager - ERROR - Memory value too high: 1000000
+2025-05-16 21:35:03,933 - vm_manager - ERROR - VM name cannot be empty
+2025-05-16 21:35:03,933 - vm_manager - ERROR - VM name contains invalid characters: invalid/name
+2025-05-16 21:35:03,940 - vm_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:35:03,948 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:35:03,957 - vm_manager - INFO - Successfully created VM test_vm_with_iso
+2025-05-16 21:35:03,964 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:35:03,975 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:35:03,976 - vm_manager - INFO - Successfully deleted VM test_vm
+2025-05-16 21:35:03,997 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:35:04,005 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:35:04,018 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:35:04,019 - vm_manager - INFO - Using disk test_data\disks\test_disk.qcow2 with format qcow2
+2025-05-16 21:35:04,019 - vm_manager - INFO - Starting VM test_vm with command: qemu-system-x86_64 -m 1024 -smp 1 -drive file=test_data\disks\test_disk.qcow2,format=qcow2 -display gtk
+2025-05-16 21:35:06,030 - vm_manager - WARNING - VM config for nonexistent_vm no longer exists at test_data\vms\nonexistent_vm.json. Removing from registry.
+2025-05-16 21:35:06,031 - vm_manager - INFO - Added existing VM unlisted_vm to registry
+2025-05-16 21:35:06,111 - vm_manager - ERROR - Disk test_disk not found
+2025-05-16 21:35:06,124 - vm_manager - ERROR - Disk test_disk not found
+2025-05-16 21:35:06,136 - vm_manager - ERROR - Disk test_disk not found
+2025-05-16 21:35:06,156 - vm_manager - ERROR - Disk test_disk not found
+2025-05-16 21:36:06,620 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:36:06,620 - vm_manager - ERROR - VM test_vm already exists
+2025-05-16 21:36:06,627 - vm_manager - ERROR - CPU count must be positive: -1
+2025-05-16 21:36:06,627 - vm_manager - ERROR - CPU count too high: 32
+2025-05-16 21:36:06,633 - vm_manager - ERROR - Memory must be positive: -1024
+2025-05-16 21:36:06,634 - vm_manager - ERROR - Memory too low: 100
+2025-05-16 21:36:06,634 - vm_manager - ERROR - Memory value too high: 1000000
+2025-05-16 21:36:06,640 - vm_manager - ERROR - VM name cannot be empty
+2025-05-16 21:36:06,640 - vm_manager - ERROR - VM name contains invalid characters: invalid/name
+2025-05-16 21:36:06,649 - vm_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:36:06,657 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:36:06,666 - vm_manager - INFO - Successfully created VM test_vm_with_iso
+2025-05-16 21:36:06,673 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:36:06,681 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:36:06,683 - vm_manager - INFO - Successfully deleted VM test_vm
+2025-05-16 21:36:06,698 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:36:06,705 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:36:06,714 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:36:06,715 - vm_manager - INFO - Using disk test_data\disks\test_disk.qcow2 with format qcow2
+2025-05-16 21:36:06,715 - vm_manager - INFO - Starting VM test_vm with command: qemu-system-x86_64 -m 1024 -smp 1 -drive file=test_data\disks\test_disk.qcow2,format=qcow2 -display gtk
+2025-05-16 21:36:08,724 - vm_manager - WARNING - VM config for nonexistent_vm no longer exists at test_data\vms\nonexistent_vm.json. Removing from registry.
+2025-05-16 21:36:08,725 - vm_manager - INFO - Added existing VM unlisted_vm to registry
+2025-05-16 21:36:08,794 - vm_manager - ERROR - Disk test_disk not found
+2025-05-16 21:36:08,804 - vm_manager - ERROR - Disk test_disk not found
+2025-05-16 21:36:08,812 - vm_manager - ERROR - Disk test_disk not found
+2025-05-16 21:36:08,829 - vm_manager - ERROR - Disk test_disk not found
+2025-05-16 21:37:50,511 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:37:50,512 - vm_manager - ERROR - VM test_vm already exists
+2025-05-16 21:37:50,519 - vm_manager - ERROR - CPU count must be positive: -1
+2025-05-16 21:37:50,520 - vm_manager - ERROR - CPU count too high: 32
+2025-05-16 21:37:50,527 - vm_manager - ERROR - Memory must be positive: -1024
+2025-05-16 21:37:50,527 - vm_manager - ERROR - Memory too low: 100
+2025-05-16 21:37:50,528 - vm_manager - ERROR - Memory value too high: 1000000
+2025-05-16 21:37:50,535 - vm_manager - ERROR - VM name cannot be empty
+2025-05-16 21:37:50,535 - vm_manager - ERROR - VM name contains invalid characters: invalid/name
+2025-05-16 21:37:50,545 - vm_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:37:50,554 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:37:50,565 - vm_manager - INFO - Successfully created VM test_vm_with_iso
+2025-05-16 21:37:50,575 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:37:50,583 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:37:50,585 - vm_manager - INFO - Successfully deleted VM test_vm
+2025-05-16 21:37:50,602 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:37:50,610 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:37:50,619 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:37:50,620 - vm_manager - INFO - Using disk test_data\disks\test_disk.qcow2 with format qcow2
+2025-05-16 21:37:50,620 - vm_manager - INFO - Starting VM test_vm with command: qemu-system-x86_64 -m 1024 -smp 1 -drive file=test_data\disks\test_disk.qcow2,format=qcow2 -display gtk
+2025-05-16 21:37:52,628 - vm_manager - WARNING - VM config for nonexistent_vm no longer exists at test_data\vms\nonexistent_vm.json. Removing from registry.
+2025-05-16 21:37:52,629 - vm_manager - INFO - Added existing VM unlisted_vm to registry
+2025-05-16 21:37:52,694 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:37:52,703 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:37:52,704 - vm_manager - ERROR - VM config file not found at test_data\vms\test_vm.json
+2025-05-16 21:37:52,715 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:37:52,733 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:40:14,384 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:40:14,384 - vm_manager - ERROR - VM test_vm already exists
+2025-05-16 21:40:14,392 - vm_manager - ERROR - CPU count must be positive: -1
+2025-05-16 21:40:14,392 - vm_manager - ERROR - CPU count too high: 32
+2025-05-16 21:40:14,398 - vm_manager - ERROR - Memory must be positive: -1024
+2025-05-16 21:40:14,399 - vm_manager - ERROR - Memory too low: 100
+2025-05-16 21:40:14,399 - vm_manager - ERROR - Memory value too high: 1000000
+2025-05-16 21:40:14,405 - vm_manager - ERROR - VM name cannot be empty
+2025-05-16 21:40:14,405 - vm_manager - ERROR - VM name contains invalid characters: invalid/name
+2025-05-16 21:40:14,412 - vm_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:40:14,420 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:40:14,430 - vm_manager - INFO - Successfully created VM test_vm_with_iso
+2025-05-16 21:40:14,437 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:40:14,445 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:40:14,446 - vm_manager - INFO - Successfully deleted VM test_vm
+2025-05-16 21:40:14,461 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:40:14,468 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:40:14,477 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:40:14,478 - vm_manager - INFO - Using disk test_data\disks\test_disk.qcow2 with format qcow2
+2025-05-16 21:40:14,478 - vm_manager - INFO - Starting VM test_vm with command: qemu-system-x86_64 -m 1024 -smp 1 -drive file=test_data\disks\test_disk.qcow2,format=qcow2 -display gtk
+2025-05-16 21:40:16,487 - vm_manager - WARNING - VM config for nonexistent_vm no longer exists at test_data\vms\nonexistent_vm.json. Removing from registry.
+2025-05-16 21:40:16,488 - vm_manager - INFO - Added existing VM unlisted_vm to registry
+2025-05-16 21:40:16,584 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:40:16,601 - vm_manager - ERROR - Config file already exists at test_data\vms\test_vm.json
+2025-05-16 21:40:16,617 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:40:16,646 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:40:16,648 - vm_manager - WARNING - VM config for www no longer exists at data/vms\www.json. Removing from registry.
+2025-05-16 21:40:16,648 - vm_manager - WARNING - VM config for test_vm no longer exists at test_data\vms\test_vm.json. Removing from registry.
+2025-05-16 21:40:16,649 - vm_manager - INFO - Added existing VM test_vm to registry
+2025-05-16 21:41:53,573 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:41:53,573 - vm_manager - ERROR - VM test_vm already exists
+2025-05-16 21:41:53,581 - vm_manager - ERROR - CPU count must be positive: -1
+2025-05-16 21:41:53,581 - vm_manager - ERROR - CPU count too high: 32
+2025-05-16 21:41:53,587 - vm_manager - ERROR - Memory must be positive: -1024
+2025-05-16 21:41:53,588 - vm_manager - ERROR - Memory too low: 100
+2025-05-16 21:41:53,588 - vm_manager - ERROR - Memory value too high: 1000000
+2025-05-16 21:41:53,595 - vm_manager - ERROR - VM name cannot be empty
+2025-05-16 21:41:53,595 - vm_manager - ERROR - VM name contains invalid characters: invalid/name
+2025-05-16 21:41:53,603 - vm_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:41:53,614 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:41:53,623 - vm_manager - INFO - Successfully created VM test_vm_with_iso
+2025-05-16 21:41:53,630 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:41:53,639 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:41:53,640 - vm_manager - INFO - Successfully deleted VM test_vm
+2025-05-16 21:41:53,654 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:41:53,662 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:41:53,672 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:41:53,673 - vm_manager - INFO - Using disk test_data\disks\test_disk.qcow2 with format qcow2
+2025-05-16 21:41:53,673 - vm_manager - INFO - Starting VM test_vm with command: qemu-system-x86_64 -m 1024 -smp 1 -drive file=test_data\disks\test_disk.qcow2,format=qcow2 -display gtk
+2025-05-16 21:41:55,683 - vm_manager - WARNING - VM config for nonexistent_vm no longer exists at test_data\vms\nonexistent_vm.json. Removing from registry.
+2025-05-16 21:41:55,684 - vm_manager - INFO - Added existing VM unlisted_vm to registry
+2025-05-16 21:41:55,756 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:41:55,769 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:41:55,780 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:41:55,800 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:41:55,801 - vm_manager - WARNING - VM config for www no longer exists at data/vms\www.json. Removing from registry.
+2025-05-16 21:41:55,802 - vm_manager - WARNING - VM config for test_vm no longer exists at test_data\vms\test_vm.json. Removing from registry.
+2025-05-16 21:41:55,803 - vm_manager - INFO - Added existing VM test_vm to registry
+2025-05-16 21:42:51,847 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:42:51,847 - vm_manager - ERROR - VM test_vm already exists
+2025-05-16 21:42:51,855 - vm_manager - ERROR - CPU count must be positive: -1
+2025-05-16 21:42:51,855 - vm_manager - ERROR - CPU count too high: 32
+2025-05-16 21:42:51,864 - vm_manager - ERROR - Memory must be positive: -1024
+2025-05-16 21:42:51,864 - vm_manager - ERROR - Memory too low: 100
+2025-05-16 21:42:51,864 - vm_manager - ERROR - Memory value too high: 1000000
+2025-05-16 21:42:51,872 - vm_manager - ERROR - VM name cannot be empty
+2025-05-16 21:42:51,872 - vm_manager - ERROR - VM name contains invalid characters: invalid/name
+2025-05-16 21:42:51,881 - vm_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:42:51,891 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:42:51,902 - vm_manager - INFO - Successfully created VM test_vm_with_iso
+2025-05-16 21:42:51,911 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:42:51,923 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:42:51,924 - vm_manager - INFO - Successfully deleted VM test_vm
+2025-05-16 21:42:51,941 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:42:51,950 - vm_manager - ERROR - VM nonexistent_vm not found
+2025-05-16 21:42:51,960 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:42:51,961 - vm_manager - INFO - Using disk test_data\disks\test_disk.qcow2 with format qcow2
+2025-05-16 21:42:51,961 - vm_manager - INFO - Starting VM test_vm with command: qemu-system-x86_64 -m 1024 -smp 1 -drive file=test_data\disks\test_disk.qcow2,format=qcow2 -display gtk
+2025-05-16 21:42:53,972 - vm_manager - WARNING - VM config for nonexistent_vm no longer exists at test_data\vms\nonexistent_vm.json. Removing from registry.
+2025-05-16 21:42:53,973 - vm_manager - INFO - Added existing VM unlisted_vm to registry
+2025-05-16 21:42:54,050 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:42:54,064 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:42:54,065 - vm_manager - INFO - Using disk test_data\disks\test_disk.qcow2 with format raw
+2025-05-16 21:42:54,065 - vm_manager - INFO - Starting VM test_vm with command: qemu-system-x86_64 -m 1024 -smp 1 -drive file=test_data\disks\test_disk.qcow2,format=raw -display gtk
+2025-05-16 21:42:56,075 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:42:56,096 - vm_manager - INFO - Successfully created VM test_vm
+2025-05-16 21:42:56,097 - vm_manager - WARNING - VM config for www no longer exists at data/vms\www.json. Removing from registry.
+2025-05-16 21:42:56,097 - vm_manager - WARNING - VM config for test_vm no longer exists at test_data\vms\test_vm.json. Removing from registry.
+2025-05-16 21:42:56,098 - vm_manager - INFO - Added existing VM test_vm to registry

@@ -122,6 +122,56 @@ These directories are excluded from version control in the `.gitignore` file but
 - **VM fails to start**: Check if the disk and ISO paths are valid
 - **Disk creation fails**: Verify you have permissions to write to the data directory
 
+## Running Tests
+
+The application includes a comprehensive test suite that covers all major components:
+
+### Test Structure
+
+- **Unit Tests**: Tests for individual components
+  - `test_disk_manager.py`: Tests disk creation, listing, and deletion
+  - `test_vm_manager.py`: Tests VM creation, configuration, and control
+  - `test_docker_manager.py`: Tests Docker operations and integration
+
+- **Integration Tests**:
+  - `test_integration.py`: Tests interactions between components
+
+### Running the Tests
+
+To run the complete test suite:
+
+```bash
+python run_tests.py
+```
+
+This will:
+1. Execute all unit and integration tests
+2. Generate a detailed test report in the `test_reports` directory
+3. Display a summary of the results in the terminal
+
+For more focused testing, you can run individual test modules:
+
+```bash
+python -m unittest test_disk_manager.py
+```
+
+### Test Reports
+
+Test reports are saved in the `test_reports` directory with timestamps in their filenames. These reports include:
+- Test results for each test case
+- Error details for failed tests
+- A summary section with overall statistics
+
+### Interpreting Results
+
+The test summary provides:
+- Total number of tests executed
+- Number of passed tests
+- Number of failed tests
+- Number of errors encountered
+
+Note: Some tests may fail if dependencies like QEMU or Docker are not installed or accessible. The test output will indicate these cases.
+
 ## License
 
 This project is open source, free to use and modify.

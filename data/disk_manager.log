@@ -32,3 +32,288 @@
 2025-05-16 19:16:08,214 - disk_manager - INFO - Successfully created disk ww with size 10G and format qcow2
 2025-05-16 19:49:19,570 - disk_manager - WARNING - Disk ww no longer exists at data/disks\ww.qcow2. Removing from registry.
 2025-05-16 19:49:20,414 - disk_manager - INFO - Added existing disk fristvd to registry
+2025-05-16 21:20:47,436 - disk_manager - WARNING - Disk fristvd no longer exists at data/disks\fristvd.qcow2. Removing from registry.
+2025-05-16 21:20:47,440 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:20:47,445 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:20:47,446 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:20:47,451 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:21:18,379 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:21:18,382 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:21:18,382 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:21:18,385 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:21:18,409 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:21:18,410 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:21:18,418 - disk_manager - INFO - Successfully deleted disk test_disk
+2025-05-16 21:21:18,424 - disk_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:21:18,436 - disk_manager - WARNING - Disk nonexistent_disk no longer exists at test_data\disks\nonexistent.qcow2. Removing from registry.
+2025-05-16 21:21:18,437 - disk_manager - INFO - Added existing disk unlisted_disk to registry
+2025-05-16 21:21:57,601 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:21:57,605 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:21:57,605 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:21:57,608 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:21:57,714 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:21:57,714 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:21:57,720 - disk_manager - INFO - Successfully deleted disk test_disk
+2025-05-16 21:21:57,724 - disk_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:21:57,732 - disk_manager - WARNING - Disk nonexistent_disk no longer exists at test_data\disks\nonexistent.qcow2. Removing from registry.
+2025-05-16 21:21:57,733 - disk_manager - INFO - Added existing disk unlisted_disk to registry
+2025-05-16 21:23:03,843 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:23:03,847 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:23:03,848 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:23:03,851 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:23:03,857 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:23:03,861 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:23:03,861 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:23:03,865 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:23:03,891 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:23:03,892 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:23:03,902 - disk_manager - INFO - Successfully deleted disk test_disk
+2025-05-16 21:23:03,905 - disk_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:23:03,916 - disk_manager - WARNING - Disk nonexistent_disk no longer exists at test_data\disks\nonexistent.qcow2. Removing from registry.
+2025-05-16 21:23:03,917 - disk_manager - INFO - Added existing disk unlisted_disk to registry
+2025-05-16 21:23:31,883 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:23:31,885 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:23:31,886 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:23:31,889 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:23:31,893 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:23:31,894 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:23:31,899 - disk_manager - INFO - Successfully deleted disk test_disk
+2025-05-16 21:23:31,903 - disk_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:23:31,911 - disk_manager - WARNING - Disk nonexistent_disk no longer exists at test_data\disks\nonexistent.qcow2. Removing from registry.
+2025-05-16 21:23:31,911 - disk_manager - INFO - Added existing disk unlisted_disk to registry
+2025-05-16 21:24:22,994 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:24:22,998 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:24:22,999 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:24:23,001 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:24:23,007 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:24:23,008 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:24:23,014 - disk_manager - INFO - Successfully deleted disk test_disk
+2025-05-16 21:24:23,017 - disk_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:24:23,029 - disk_manager - WARNING - Disk nonexistent_disk no longer exists at test_data\disks\nonexistent.qcow2. Removing from registry.
+2025-05-16 21:24:23,030 - disk_manager - INFO - Added existing disk unlisted_disk to registry
+2025-05-16 21:25:12,320 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:25:12,325 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:25:12,325 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:25:12,327 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:25:12,332 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:25:12,333 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:25:12,339 - disk_manager - INFO - Successfully deleted disk test_disk
+2025-05-16 21:25:12,342 - disk_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:25:12,352 - disk_manager - WARNING - Disk nonexistent_disk no longer exists at test_data\disks\nonexistent.qcow2. Removing from registry.
+2025-05-16 21:25:12,353 - disk_manager - INFO - Added existing disk unlisted_disk to registry
+2025-05-16 21:25:43,095 - disk_manager - INFO - Added existing disk ww to registry
+2025-05-16 21:25:49,755 - disk_manager - ERROR - Disk ww already exists
+2025-05-16 21:26:14,791 - disk_manager - ERROR - Disk ww already exists
+2025-05-16 21:29:30,551 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:29:30,554 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:29:30,554 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:29:30,558 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:29:30,563 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:29:30,563 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:29:30,568 - disk_manager - INFO - Successfully deleted disk test_disk
+2025-05-16 21:29:30,572 - disk_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:29:30,581 - disk_manager - WARNING - Disk nonexistent_disk no longer exists at test_data\disks\nonexistent.qcow2. Removing from registry.
+2025-05-16 21:29:30,582 - disk_manager - INFO - Added existing disk unlisted_disk to registry
+2025-05-16 21:29:32,890 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:29:32,901 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:29:32,908 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:29:32,909 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:29:32,918 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:29:32,919 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:29:32,927 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:29:32,927 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:29:32,934 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:29:32,935 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:30:15,179 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:30:15,182 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:30:15,183 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:30:15,185 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:30:15,185 - disk_manager - ERROR - Invalid size format: -10G
+2025-05-16 21:30:15,186 - disk_manager - ERROR - Invalid size format: abc
+2025-05-16 21:30:15,189 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:30:15,190 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:30:15,196 - disk_manager - INFO - Successfully deleted disk test_disk
+2025-05-16 21:30:15,199 - disk_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:30:15,209 - disk_manager - WARNING - Disk nonexistent_disk no longer exists at test_data\disks\nonexistent.qcow2. Removing from registry.
+2025-05-16 21:30:15,210 - disk_manager - INFO - Added existing disk unlisted_disk to registry
+2025-05-16 21:30:17,514 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:30:17,515 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:30:17,520 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:30:17,521 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:30:17,531 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:30:17,532 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:30:17,540 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:30:17,541 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:30:17,549 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:30:17,549 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:31:49,611 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:31:49,614 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:31:49,615 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:31:49,617 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:31:49,618 - disk_manager - ERROR - Invalid size format: -10G
+2025-05-16 21:31:49,618 - disk_manager - ERROR - Invalid size format: abc
+2025-05-16 21:31:49,621 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:31:49,621 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:31:49,627 - disk_manager - INFO - Successfully deleted disk test_disk
+2025-05-16 21:31:49,631 - disk_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:31:49,642 - disk_manager - WARNING - Disk nonexistent_disk no longer exists at test_data\disks\nonexistent.qcow2. Removing from registry.
+2025-05-16 21:31:49,643 - disk_manager - INFO - Added existing disk unlisted_disk to registry
+2025-05-16 21:31:51,831 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:31:51,832 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:31:51,839 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:31:51,840 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:31:51,846 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:31:51,846 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:31:51,852 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:31:51,852 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:31:51,858 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:31:51,859 - disk_manager - ERROR - Error creating disk: [WinError 2] The system cannot find the file specified: 'test_data\\disks\\test_disk.qcow2'
+2025-05-16 21:33:19,933 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:33:19,936 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:33:19,937 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:33:19,940 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:33:19,940 - disk_manager - ERROR - Invalid size format: -10G
+2025-05-16 21:33:19,940 - disk_manager - ERROR - Invalid size format: abc
+2025-05-16 21:33:19,945 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:33:19,946 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:33:19,953 - disk_manager - INFO - Successfully deleted disk test_disk
+2025-05-16 21:33:19,957 - disk_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:33:19,967 - disk_manager - WARNING - Disk nonexistent_disk no longer exists at test_data\disks\nonexistent.qcow2. Removing from registry.
+2025-05-16 21:33:19,968 - disk_manager - INFO - Added existing disk unlisted_disk to registry
+2025-05-16 21:33:22,194 - disk_manager - ERROR - File already exists at path: test_data\disks\test_disk.qcow2
+2025-05-16 21:33:22,203 - disk_manager - ERROR - File already exists at path: test_data\disks\test_disk.qcow2
+2025-05-16 21:33:22,210 - disk_manager - ERROR - File already exists at path: test_data\disks\test_disk.qcow2
+2025-05-16 21:33:22,216 - disk_manager - ERROR - File already exists at path: test_data\disks\test_disk.qcow2
+2025-05-16 21:33:22,223 - disk_manager - ERROR - File already exists at path: test_data\disks\test_disk.qcow2
+2025-05-16 21:35:03,872 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:35:03,875 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:35:03,875 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:35:03,878 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:35:03,879 - disk_manager - ERROR - Invalid size format: -10G
+2025-05-16 21:35:03,879 - disk_manager - ERROR - Invalid size format: abc
+2025-05-16 21:35:03,883 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:35:03,884 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:35:03,888 - disk_manager - INFO - Successfully deleted disk test_disk
+2025-05-16 21:35:03,894 - disk_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:35:03,902 - disk_manager - WARNING - Disk nonexistent_disk no longer exists at test_data\disks\nonexistent.qcow2. Removing from registry.
+2025-05-16 21:35:03,903 - disk_manager - INFO - Added existing disk unlisted_disk to registry
+2025-05-16 21:35:06,109 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:35:06,110 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:35:06,121 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:35:06,122 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:35:06,133 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:35:06,135 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:35:06,143 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:35:06,145 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:35:06,153 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:35:06,155 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:36:06,584 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:36:06,588 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:36:06,588 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:36:06,591 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:36:06,591 - disk_manager - ERROR - Invalid size format: -10G
+2025-05-16 21:36:06,592 - disk_manager - ERROR - Invalid size format: abc
+2025-05-16 21:36:06,595 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:36:06,597 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:36:06,600 - disk_manager - INFO - Successfully deleted disk test_disk
+2025-05-16 21:36:06,603 - disk_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:36:06,611 - disk_manager - WARNING - Disk nonexistent_disk no longer exists at test_data\disks\nonexistent.qcow2. Removing from registry.
+2025-05-16 21:36:06,611 - disk_manager - INFO - Added existing disk unlisted_disk to registry
+2025-05-16 21:36:08,790 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:36:08,792 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:36:08,802 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:36:08,803 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:36:08,810 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:36:08,811 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:36:08,818 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:36:08,820 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:36:08,827 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:36:08,828 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:37:50,383 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:37:50,387 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:37:50,387 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:37:50,390 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:37:50,391 - disk_manager - ERROR - Invalid size format: -10G
+2025-05-16 21:37:50,391 - disk_manager - ERROR - Invalid size format: abc
+2025-05-16 21:37:50,395 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:37:50,396 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:37:50,401 - disk_manager - INFO - Successfully deleted disk test_disk
+2025-05-16 21:37:50,404 - disk_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:37:50,412 - disk_manager - WARNING - Disk nonexistent_disk no longer exists at test_data\disks\nonexistent.qcow2. Removing from registry.
+2025-05-16 21:37:50,413 - disk_manager - INFO - Added existing disk unlisted_disk to registry
+2025-05-16 21:37:52,689 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:37:52,690 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:37:52,700 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:37:52,701 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:37:52,713 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:37:52,714 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:37:52,722 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:37:52,723 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:37:52,730 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:37:52,731 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:40:14,346 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:40:14,349 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:40:14,349 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:40:14,352 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:40:14,352 - disk_manager - ERROR - Invalid size format: -10G
+2025-05-16 21:40:14,352 - disk_manager - ERROR - Invalid size format: abc
+2025-05-16 21:40:14,357 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:40:14,358 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:40:14,363 - disk_manager - INFO - Successfully deleted disk test_disk
+2025-05-16 21:40:14,365 - disk_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:40:14,374 - disk_manager - WARNING - Disk nonexistent_disk no longer exists at test_data\disks\nonexistent.qcow2. Removing from registry.
+2025-05-16 21:40:14,376 - disk_manager - INFO - Added existing disk unlisted_disk to registry
+2025-05-16 21:40:16,579 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:40:16,580 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:40:16,598 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:40:16,600 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:40:16,613 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:40:16,614 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:40:16,628 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:40:16,630 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:40:16,642 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:40:16,643 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:41:53,534 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:41:53,538 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:41:53,539 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:41:53,542 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:41:53,542 - disk_manager - ERROR - Invalid size format: -10G
+2025-05-16 21:41:53,543 - disk_manager - ERROR - Invalid size format: abc
+2025-05-16 21:41:53,546 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:41:53,547 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:41:53,552 - disk_manager - INFO - Successfully deleted disk test_disk
+2025-05-16 21:41:53,554 - disk_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:41:53,563 - disk_manager - WARNING - Disk nonexistent_disk no longer exists at test_data\disks\nonexistent.qcow2. Removing from registry.
+2025-05-16 21:41:53,563 - disk_manager - INFO - Added existing disk unlisted_disk to registry
+2025-05-16 21:41:55,752 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:41:55,754 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:41:55,764 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:41:55,766 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:41:55,776 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:41:55,778 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:41:55,787 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:41:55,789 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:41:55,796 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:41:55,797 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:42:51,805 - disk_manager - ERROR - Invalid disk format: invalid_format
+2025-05-16 21:42:51,809 - disk_manager - ERROR - Disk name cannot be empty
+2025-05-16 21:42:51,809 - disk_manager - ERROR - Disk name contains invalid characters: invalid/name
+2025-05-16 21:42:51,812 - disk_manager - ERROR - Disk size must be positive: 0G
+2025-05-16 21:42:51,813 - disk_manager - ERROR - Invalid size format: -10G
+2025-05-16 21:42:51,813 - disk_manager - ERROR - Invalid size format: abc
+2025-05-16 21:42:51,818 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:42:51,819 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:42:51,824 - disk_manager - INFO - Successfully deleted disk test_disk
+2025-05-16 21:42:51,827 - disk_manager - ERROR - Disk nonexistent_disk not found
+2025-05-16 21:42:51,836 - disk_manager - WARNING - Disk nonexistent_disk no longer exists at test_data\disks\nonexistent.qcow2. Removing from registry.
+2025-05-16 21:42:51,837 - disk_manager - INFO - Added existing disk unlisted_disk to registry
+2025-05-16 21:42:54,047 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:42:54,048 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:42:54,061 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:42:54,062 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:42:56,071 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:42:56,072 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:42:56,083 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:42:56,084 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2
+2025-05-16 21:42:56,091 - disk_manager - INFO - Running command: qemu-img create -f qcow2 test_data\disks\test_disk.qcow2 10G
+2025-05-16 21:42:56,093 - disk_manager - INFO - Successfully created disk test_disk with size 10G and format qcow2

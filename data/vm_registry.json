@@ -1,10 +1,10 @@
 {
-  "firstvm": {
-    "config_path": "data/vms\\firstvm.json",
-    "disk": "data/disks\\fristvd.qcow2",
-    "memory": 4096,
-    "cpus": 2,
-    "iso": "data/isos\\lubuntu-24.04.2-desktop-amd64.iso",
-    "created_time": 1747127692.8285642
+  "www": {
+    "config_path": "data/vms\\www.json",
+    "disk": "data/disks\\ww.qcow2",
+    "memory": 1024,
+    "cpus": 1,
+    "iso": "data/isos\\alpine-standard-3.21.3-x86_64.iso",
+    "created_time": 1747412190.602773
   }
 }

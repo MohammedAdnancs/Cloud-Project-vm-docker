@@ -1,0 +1,171 @@
+Cloud VM Manager Test Report
+Generated: 2025-05-16 21:30:15
+==================================================
+
+test_create_disk_invalid_format (test_disk_manager.TestDiskManager.test_create_disk_invalid_format)
+Test creating a disk with invalid format ... ok
+test_create_disk_invalid_name (test_disk_manager.TestDiskManager.test_create_disk_invalid_name)
+Test creating a disk with invalid name ... ok
+test_create_disk_invalid_size (test_disk_manager.TestDiskManager.test_create_disk_invalid_size)
+Test creating a disk with invalid size ... ok
+test_create_disk_success (test_disk_manager.TestDiskManager.test_create_disk_success)
+Test creating a disk with valid parameters ... FAIL
+test_delete_disk (test_disk_manager.TestDiskManager.test_delete_disk)
+Test deleting a disk ... ok
+test_delete_nonexistent_disk (test_disk_manager.TestDiskManager.test_delete_nonexistent_disk)
+Test deleting a disk that doesn't exist ... ok
+test_get_disk_path (test_disk_manager.TestDiskManager.test_get_disk_path)
+Test getting the path for a specific disk ... ok
+test_list_disks (test_disk_manager.TestDiskManager.test_list_disks)
+Test listing available disks ... ok
+test_validate_registry (test_disk_manager.TestDiskManager.test_validate_registry)
+Test registry validation functionality ... ok
+test_create_vm_duplicate_name (test_vm_manager.TestVMManager.test_create_vm_duplicate_name)
+Test creating a VM with a name that already exists ... ok
+test_create_vm_invalid_cpus (test_vm_manager.TestVMManager.test_create_vm_invalid_cpus)
+Test creating a VM with invalid CPU settings ... ok
+test_create_vm_invalid_memory (test_vm_manager.TestVMManager.test_create_vm_invalid_memory)
+Test creating a VM with invalid memory settings ... ok
+test_create_vm_invalid_name (test_vm_manager.TestVMManager.test_create_vm_invalid_name)
+Test creating a VM with invalid name ... ok
+test_create_vm_nonexistent_disk (test_vm_manager.TestVMManager.test_create_vm_nonexistent_disk)
+Test creating a VM with a disk that doesn't exist ... ok
+test_create_vm_success (test_vm_manager.TestVMManager.test_create_vm_success)
+Test creating a VM with valid parameters ... ok
+test_create_vm_with_iso (test_vm_manager.TestVMManager.test_create_vm_with_iso)
+Test creating a VM with an ISO file ... ok
+test_delete_nonexistent_vm (test_vm_manager.TestVMManager.test_delete_nonexistent_vm)
+Test deleting a VM that doesn't exist ... ok
+test_delete_vm (test_vm_manager.TestVMManager.test_delete_vm)
+Test deleting a VM ... ok
+test_list_isos (test_vm_manager.TestVMManager.test_list_isos)
+Test listing available ISO files ... ok
+test_list_vms (test_vm_manager.TestVMManager.test_list_vms)
+Test listing available VMs ... ok
+test_start_nonexistent_vm (test_vm_manager.TestVMManager.test_start_nonexistent_vm)
+Test starting a VM that doesn't exist ... ok
+test_start_vm (test_vm_manager.TestVMManager.test_start_vm)
+Test starting a VM ... ok
+test_validate_registry (test_vm_manager.TestVMManager.test_validate_registry)
+Test VM registry validation ... ok
+test_build_image (test_docker_manager.TestDockerManager.test_build_image)
+Test building a Docker image from a Dockerfile ... ok
+test_create_dockerfile (test_docker_manager.TestDockerManager.test_create_dockerfile)
+Test creating a standalone Dockerfile ... ok
+test_create_dockerfile_project (test_docker_manager.TestDockerManager.test_create_dockerfile_project)
+Test creating a Docker project with Dockerfile and other files ... ok
+test_create_dockerfile_project_minimal (test_docker_manager.TestDockerManager.test_create_dockerfile_project_minimal)
+Test creating a Docker project with only a Dockerfile ... ok
+test_list_containers (test_docker_manager.TestDockerManager.test_list_containers)
+Test listing Docker containers ... ok
+test_list_images (test_docker_manager.TestDockerManager.test_list_images)
+Test listing Docker images ... ok
+test_remove_container (test_docker_manager.TestDockerManager.test_remove_container)
+Test removing a Docker container ... ok
+test_run_container (test_docker_manager.TestDockerManager.test_run_container)
+Test running a Docker container ... ok
+test_search_dockerhub (test_docker_manager.TestDockerManager.test_search_dockerhub)
+Test searching for a Docker image on DockerHub ... ok
+test_search_local_image (test_docker_manager.TestDockerManager.test_search_local_image)
+Test searching for a local Docker image ... ok
+test_start_container (test_docker_manager.TestDockerManager.test_start_container)
+Test starting a Docker container ... ok
+test_stop_container (test_docker_manager.TestDockerManager.test_stop_container)
+Test stopping a Docker container ... ok
+test_create_disk_then_vm (test_integration.TestDiskVMIntegration.test_create_disk_then_vm)
+Test creating a disk and then using it to create a VM ... FAIL
+test_create_disk_vm_and_start (test_integration.TestDiskVMIntegration.test_create_disk_vm_and_start)
+Test creating a disk, creating a VM, and then starting it ... FAIL
+test_delete_disk_used_by_vm (test_integration.TestDiskVMIntegration.test_delete_disk_used_by_vm)
+Test that a disk used by a VM cannot be deleted ... FAIL
+test_refreshed_disk_available_to_vm (test_integration.TestDiskVMIntegration.test_refreshed_disk_available_to_vm)
+Test that newly created disks are recognized by the VM manager ... FAIL
+test_vm_registry_sync_with_disk_registry (test_integration.TestDiskVMIntegration.test_vm_registry_sync_with_disk_registry)
+Test that VM registry stays in sync with disk registry ... ERROR
+test_create_dockerfile_build_run (test_integration.TestDockerIntegration.test_create_dockerfile_build_run)
+Test creating a Dockerfile, building an image, and running a container ... ok
+
+======================================================================
+ERROR: test_vm_registry_sync_with_disk_registry (test_integration.TestDiskVMIntegration.test_vm_registry_sync_with_disk_registry)
+Test that VM registry stays in sync with disk registry
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Python313\Lib\unittest\mock.py", line 1424, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\git hub projects\cloud\test_integration.py", line 167, in test_vm_registry_sync_with_disk_registry
+    disk_info = self.disk_manager.registry.pop(disk_name)
+KeyError: 'test_disk'
+
+======================================================================
+FAIL: test_create_disk_success (test_disk_manager.TestDiskManager.test_create_disk_success)
+Test creating a disk with valid parameters
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Python313\Lib\unittest\mock.py", line 1424, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\git hub projects\cloud\test_disk_manager.py", line 45, in test_create_disk_success
+    self.assertTrue(success)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_create_disk_then_vm (test_integration.TestDiskVMIntegration.test_create_disk_then_vm)
+Test creating a disk and then using it to create a VM
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Python313\Lib\unittest\mock.py", line 1424, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\git hub projects\cloud\test_integration.py", line 55, in test_create_disk_then_vm
+    self.assertTrue(success)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_create_disk_vm_and_start (test_integration.TestDiskVMIntegration.test_create_disk_vm_and_start)
+Test creating a disk, creating a VM, and then starting it
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Python313\Lib\unittest\mock.py", line 1424, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\git hub projects\cloud\test_integration.py", line 99, in test_create_disk_vm_and_start
+    self.assertTrue(success)
+    ~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_delete_disk_used_by_vm (test_integration.TestDiskVMIntegration.test_delete_disk_used_by_vm)
+Test that a disk used by a VM cannot be deleted
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Python313\Lib\unittest\mock.py", line 1424, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\git hub projects\cloud\test_integration.py", line 139, in test_delete_disk_used_by_vm
+    self.assertTrue(disk_in_use, "Disk should be in use by a VM")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Disk should be in use by a VM
+
+======================================================================
+FAIL: test_refreshed_disk_available_to_vm (test_integration.TestDiskVMIntegration.test_refreshed_disk_available_to_vm)
+Test that newly created disks are recognized by the VM manager
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Python313\Lib\unittest\mock.py", line 1424, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\git hub projects\cloud\test_integration.py", line 201, in test_refreshed_disk_available_to_vm
+    self.assertIsNotNone(disk_path, "Disk should be visible to VM manager after refresh")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Disk should be visible to VM manager after refresh
+
+----------------------------------------------------------------------
+Ran 41 tests in 2.375s
+
+FAILED (failures=5, errors=1)
+
+
+==================================================
+TEST SUMMARY
+==================================================
+Total tests: 41
+Passed: 35
+Failed: 5
+Errors: 1
